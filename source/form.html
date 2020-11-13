@@ -9,7 +9,7 @@
     <a class="page-header__logo" href="index.html">
       <img class="logo-header" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Логотип сайта Cat Energy">
     </a>
-    <button class="main-nav__toggle" type="button">
+    <button class="main-nav-toggle" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
     <nav class="main-nav">
@@ -30,11 +30,83 @@
   </header>
     
   <main class="page-main">
-    <h1 class="page-main__title">Подбор программы</h1>
     
-    <section>
-      <h2>Заглушка заголовка без каласа</h2>
-      <!-- Тут будет форма -->
+    <section class="form">
+      <h1 class="form__title">Подбор программы</h1>
+      <p class="form__desctiption">Заколните анкету, и мы подберем программу питания для вашего кота</p>
+      <form class="form__area" action="https://echo.htmlacademy.ru" method="get">
+
+        <fieldset class="feature-cat-form">
+        <legend class="feature-cat-form__legend">Параметры кота</legend>
+          <label class="feature-cat-form__caption" for="cat-name-id">
+            Имя:<span>*</span>
+          </label>
+          <input class="feature-cat-form__field" type="text" name="cat-name" id="cat-name-id" value="Барсик">
+          <label class="feature-cat-form__caption" for="cat-weight-id">
+            Вес (кг):<span>*</span>
+          </label>
+          <input class="feature-cat-form__field" type="text" name="weight-name" id="cat-weight-id" value="7">
+          <label class="feature-cat-form__caption" for="cat-old-id">
+            Возраст (лет):
+          </label>
+          <input class="feature-cat-form__field" type="text" name="cat-old" id="cat-old-id" value="7">
+        </fieldset>
+
+        <fieldset class="choice-program-form">
+        <legend class="choice-program-form__legend">Выбор программы</legend>
+          <label class="choice-program-form__field" for="slimming-program-id">
+            Похудение
+          </label>
+          <input class="choice-program-form__caption" type="radio" name="choice-program-radio" id="slimming-program-id" value="slimming" checked>
+          <label class="choice-program-form__field" for="mas-program-id">
+            Набор массы
+          </label>
+          <input class="choice-program-form__caption" type="radio" name="choice-program-radio" id="mas-program-id" value="mass">
+          <label class="choice-program-form__field" for="question-program-id">
+            Не знаю (нужет ваш совет)
+          </label>
+          <input class="choice-program-form__caption" type="radio" name="choice-program-radio" id="question-program-id" value="question">
+        </fieldset>
+
+        <fieldset class="contacts-owner-form">
+        <legend class="contacts-owner-form__legend">Контактные данные (владельца кота)</legend>
+          <label class="contacts-owner-form__caption" for="email-owner-id">
+            E-mail:<span>*</span>
+          </label>
+          <input class="contacts-owner-form__field" type="email" name="email-owner" id="email-owner-id" value="кuklachev@gmail.com">
+          <label class="contacts-owner-form__caption" for="tel-owner-id">
+            Телефон:<span>*</span>
+          </label>
+          <input class="contacts-owner-form__field" type="tel" name="tel-owner" id="tel-owner-id" value="8 (960) 900-60-90">
+        </fieldset>
+
+        <fieldset class="comment-form">
+        <legend class="comment-form__legend">Комментарий</legend> 
+          <textarea class="comment-form__text" name="comment-form-text">Расскажите обо всех повадках кота</textarea>
+        </fieldset>
+
+        <fieldset class="extra-form">
+        <legend class="extra-form__legend">Дополнительно</legend>
+          <label class="extra-form__caption" for="sweetener-id">
+            Cахарозаменитель
+          </label>
+          <input class="extra-form__field" type="checkbox" name="extra-sweetener" id="sweetener-id" checked>
+          <label class="extra-form__caption" for="water-id">
+            Питьевая вода
+          </label>
+          <input class="extra-form__field" type="checkbox" name="extra-water" id="water-id">
+          <label class="extra-form__caption" for="milk-id">
+            Молоко
+          </label>
+          <input class="extra-form__field" type="checkbox" name="extra-milk" id="milk-id">
+          <label class="extra-form__caption" for="vitamins-id">
+            Витамины
+          </label>
+          <input class="extra-form__field" type="checkbox" name="extra-vitamins" id="vitamins-id">
+        </fieldset>
+        <a class="form__button button" href="#">Отправить заявку</a>
+        <p class="form__footnote"><span>*</span> — Обязательные поля</p>
+      </form>
     </section>
 
     <section class="contacts">
