@@ -9,7 +9,7 @@
     <a class="page-header__logo" href="index.html">
       <img class="logo-header" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Логотип сайта Cat Energy">
     </a>
-    <button class="main-nav__toggle" type="button">
+    <button class="main-nav-toggle" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
     <nav class="main-nav">
@@ -30,18 +30,90 @@
   </header>
     
   <main class="page-main">
-    <h1 class="page-main__title">Подбор программы</h1>
     
-    <section>
-      <h2>Заглушка заголовка без каласа</h2>
-      <!-- Тут будет форма -->
+    <section class="program-selection">
+      <h1 class="program-selection__title">Подбор программы</h1>
+      <p class="program-selection__desctiption">Заколните анкету, и мы подберем программу питания для вашего кота</p>
+      <form class="program-selection__form selection-form" action="https://echo.htmlacademy.ru" method="get">
+
+        <fieldset class="selection-form__area">
+        <legend class="selection-form__legend selection-form__legend--hidden">Параметры кота</legend>
+          <label class="selection-form__label" for="cat-name-id">
+            Имя:<span>*</span>
+          </label>
+          <input class="selection-form__text" type="text" name="cat-name" id="cat-name-id" placeholder="Барсик">
+          <label class="selection-form__label" for="cat-weight-id">
+            Вес (кг):<span>*</span>
+          </label>
+          <input class="selection-form__text" type="text" name="cat-weight" id="cat-weight-id" placeholder="7">
+          <label class="selection-form__label" for="cat-old-id">
+            Возраст (лет):
+          </label>
+          <input class="selection-form__text" type="text" name="cat-old" id="cat-old-id" placeholder="7">
+        </fieldset>
+
+        <fieldset class="selection-form__area">
+        <legend class="selection-form__legend selection-form__legend--hidden">Выбор программы</legend>
+          <label class="selection-form__label" for="slimming-program-id">
+            Похудение
+          </label>
+          <input class="selection-form__radio" type="radio" name="choice-program" id="slimming-program-id" value="slimming" checked>
+          <label class="selection-form__label" for="mas-program-id">
+            Набор массы
+          </label>
+          <input class="selection-form__radio" type="radio" name="choice-program" id="mas-program-id" value="mass">
+          <label class="selection-form__label" for="question-program-id">
+            Не знаю (нужет ваш совет)
+          </label>
+          <input class="selection-form__radio" type="radio" name="choice-program" id="question-program-id" value="question">
+        </fieldset>
+
+        <fieldset class="selection-form__area">
+        <legend class="selection-form__legend">Контактные данные (владельца кота)</legend>
+          <label class="selection-form__label" for="email-owner-id">
+            E-mail:<span>*</span>
+          </label>
+          <input class="selection-form__text" type="email" name="email-owner" id="email-owner-id" placeholder="кuklachev@gmail.com">
+          <label class="selection-form__label" for="tel-owner-id">
+            Телефон:<span>*</span>
+          </label>
+          <input class="selection-form__text" type="tel" name="tel-owner" id="tel-owner-id" placeholder="8 (960) 900-60-90">
+        </fieldset>
+
+        <fieldset class="selection-form__area">
+        <legend class="selection-form__legend">Комментарий</legend> 
+          <textarea class="selection-form__textarea" name="comment-text" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+
+        <fieldset class="selection-form__area">
+        <legend class="selection-form__legend">Дополнительно</legend>
+          <label class="selection-form__label" for="sweetener-id">
+            Cахарозаменитель
+          </label>
+          <input class="selection-form__checkbox" type="checkbox" name="extra-product" value="sweetener" id="sweetener-id" checked>
+          <label class="selection-form__label" for="water-id">
+            Питьевая вода
+          </label>
+          <input class="selection-form__checkbox" type="checkbox" name="extra-product" value="water" id="water-id">
+          <label class="selection-form__label" for="milk-id">
+            Молоко
+          </label>
+          <input class="selection-form__checkbox" type="checkbox" name="extra-product" value="milk" id="milk-id">
+          <label class="selection-form__label" for="vitamins-id">
+            Витамины
+          </label>
+          <input class="selection-form__checkbox" type="checkbox" name="extra-product" value="vitamins" id="vitamins-id">
+        </fieldset>
+        <button class="selection-form__button button" type="submit">Отправить заявку</button>
+        <p class="selection-form__button"><span>*</span> — Обязательные поля</p>
+      </form>
     </section>
 
     <section class="contacts">
       <h2 class="visually-hidden">Адрес компании Cat Energy</h2>
       <p class="contacts__text">приглашаем к сотрудничеству дилеров!</p>
       <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-      <!-- Место для карты -->
+      <!-- Место для карты проезда -->
     </section>
   </main>
 
