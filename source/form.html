@@ -31,81 +31,81 @@
     
   <main class="page-main">
     
-    <section class="form">
-      <h1 class="form__title">Подбор программы</h1>
-      <p class="form__desctiption">Заколните анкету, и мы подберем программу питания для вашего кота</p>
-      <form class="form__area" action="https://echo.htmlacademy.ru" method="get">
+    <section class="program-selection">
+      <h1 class="program-selection__title">Подбор программы</h1>
+      <p class="program-selection__desctiption">Заколните анкету, и мы подберем программу питания для вашего кота</p>
+      <form class="program-selection__form selection-form" action="https://echo.htmlacademy.ru" method="get">
 
-        <fieldset class="feature-cat-form">
-        <legend class="feature-cat-form__legend">Параметры кота</legend>
-          <label class="feature-cat-form__caption" for="cat-name-id">
+        <fieldset class="selection-form__area">
+        <legend class="selection-form__legend selection-form__legend--hidden">Параметры кота</legend>
+          <label class="selection-form__label" for="cat-name-id">
             Имя:<span>*</span>
           </label>
-          <input class="feature-cat-form__field" type="text" name="cat-name" id="cat-name-id" placeholder="Барсик">
-          <label class="feature-cat-form__caption" for="cat-weight-id">
+          <input class="selection-form__text" type="text" name="cat-name" id="cat-name-id" placeholder="Барсик">
+          <label class="selection-form__label" for="cat-weight-id">
             Вес (кг):<span>*</span>
           </label>
-          <input class="feature-cat-form__field" type="text" name="cat-weight" id="cat-weight-id" placeholder="7">
-          <label class="feature-cat-form__caption" for="cat-old-id">
+          <input class="selection-form__text" type="text" name="cat-weight" id="cat-weight-id" placeholder="7">
+          <label class="selection-form__label" for="cat-old-id">
             Возраст (лет):
           </label>
-          <input class="feature-cat-form__field" type="text" name="cat-old" id="cat-old-id" placeholder="7">
+          <input class="selection-form__text" type="text" name="cat-old" id="cat-old-id" placeholder="7">
         </fieldset>
 
-        <fieldset class="choice-program-form">
-        <legend class="choice-program-form__legend">Выбор программы</legend>
-          <label class="choice-program-form__field" for="slimming-program-id">
+        <fieldset class="selection-form__area">
+        <legend class="selection-form__legend selection-form__legend--hidden">Выбор программы</legend>
+          <label class="selection-form__label" for="slimming-program-id">
             Похудение
           </label>
-          <input class="choice-program-form__caption" type="radio" name="choice-program" id="slimming-program-id" value="slimming" checked>
-          <label class="choice-program-form__field" for="mas-program-id">
+          <input class="selection-form__radio" type="radio" name="choice-program" id="slimming-program-id" value="slimming" checked>
+          <label class="selection-form__label" for="mas-program-id">
             Набор массы
           </label>
-          <input class="choice-program-form__caption" type="radio" name="choice-program" id="mas-program-id" value="mass">
-          <label class="choice-program-form__field" for="question-program-id">
+          <input class="selection-form__radio" type="radio" name="choice-program" id="mas-program-id" value="mass">
+          <label class="selection-form__label" for="question-program-id">
             Не знаю (нужет ваш совет)
           </label>
-          <input class="choice-program-form__caption" type="radio" name="choice-program" id="question-program-id" value="question">
+          <input class="selection-form__radio" type="radio" name="choice-program" id="question-program-id" value="question">
         </fieldset>
 
-        <fieldset class="contacts-owner-form">
-        <legend class="contacts-owner-form__legend">Контактные данные (владельца кота)</legend>
-          <label class="contacts-owner-form__caption" for="email-owner-id">
+        <fieldset class="selection-form__area">
+        <legend class="selection-form__legend">Контактные данные (владельца кота)</legend>
+          <label class="selection-form__label" for="email-owner-id">
             E-mail:<span>*</span>
           </label>
-          <input class="contacts-owner-form__field" type="email" name="email-owner" id="email-owner-id" placeholder="кuklachev@gmail.com">
-          <label class="contacts-owner-form__caption" for="tel-owner-id">
+          <input class="selection-form__text" type="email" name="email-owner" id="email-owner-id" placeholder="кuklachev@gmail.com">
+          <label class="selection-form__label" for="tel-owner-id">
             Телефон:<span>*</span>
           </label>
-          <input class="contacts-owner-form__field" type="tel" name="tel-owner" id="tel-owner-id" placeholder="8 (960) 900-60-90">
+          <input class="selection-form__text" type="tel" name="tel-owner" id="tel-owner-id" placeholder="8 (960) 900-60-90">
         </fieldset>
 
-        <fieldset class="comment-form">
-        <legend class="comment-form__legend">Комментарий</legend> 
-          <textarea class="comment-form__text" name="comment-text" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <fieldset class="selection-form__area">
+        <legend class="selection-form__legend">Комментарий</legend> 
+          <textarea class="selection-form__textarea" name="comment-text" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
-        <fieldset class="extra-form">
-        <legend class="extra-form__legend">Дополнительно</legend>
-          <label class="extra-form__caption" for="sweetener-id">
+        <fieldset class="selection-form__area">
+        <legend class="selection-form__legend">Дополнительно</legend>
+          <label class="selection-form__label" for="sweetener-id">
             Cахарозаменитель
           </label>
-          <input class="extra-form__field" type="checkbox" name="extra-product" value="sweetener" id="sweetener-id" checked>
-          <label class="extra-form__caption" for="water-id">
+          <input class="selection-form__checkbox" type="checkbox" name="extra-product" value="sweetener" id="sweetener-id" checked>
+          <label class="selection-form__label" for="water-id">
             Питьевая вода
           </label>
-          <input class="extra-form__field" type="checkbox" name="extra-product" value="water" id="water-id">
-          <label class="extra-form__caption" for="milk-id">
+          <input class="selection-form__checkbox" type="checkbox" name="extra-product" value="water" id="water-id">
+          <label class="selection-form__label" for="milk-id">
             Молоко
           </label>
-          <input class="extra-form__field" type="checkbox" name="extra-product" value="milk" id="milk-id">
-          <label class="extra-form__caption" for="vitamins-id">
+          <input class="selection-form__checkbox" type="checkbox" name="extra-product" value="milk" id="milk-id">
+          <label class="selection-form__label" for="vitamins-id">
             Витамины
           </label>
-          <input class="extra-form__field" type="checkbox" name="extra-product" value="vitamins" id="vitamins-id">
+          <input class="selection-form__checkbox" type="checkbox" name="extra-product" value="vitamins" id="vitamins-id">
         </fieldset>
-        <button type="submit" class="form__button button">Отправить заявку</button>
-        <p class="form__footnote"><span>*</span> — Обязательные поля</p>
+        <button class="selection-form__button button" type="submit">Отправить заявку</button>
+        <p class="selection-form__button"><span>*</span> — Обязательные поля</p>
       </form>
     </section>
 
