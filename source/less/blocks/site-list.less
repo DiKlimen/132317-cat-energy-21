@@ -1,0 +1,22 @@
+.site-list {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  list-style: none;
+  padding: 0;
+}
+
+.site-list__item {
+  border-top: solid 1px @site-list-border;
+  &:last-child {
+    border-bottom: solid 1px @site-list-border;
+  }
+}
+
+.site-list__item a {
+  display: block;
+  text-decoration: none;
+  color: @black;
+  padding: 22px 20px 24px 20px;
+}
