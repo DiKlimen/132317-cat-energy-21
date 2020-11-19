@@ -2,7 +2,9 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Форма заказа магазина «Cat Energy»</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
   <header class="page-header">
@@ -28,16 +30,15 @@
       </div>
     </nav>
   </header>
-    
+
   <main class="page-main">
-    
     <section class="program-selection">
       <h1 class="program-selection__title">Подбор программы</h1>
       <p class="program-selection__desctiption">Заколните анкету, и мы подберем программу питания для вашего кота</p>
       <form class="program-selection__form selection-form" action="https://echo.htmlacademy.ru" method="get">
 
         <fieldset class="selection-form__area">
-        <legend class="selection-form__legend selection-form__legend--hidden">Параметры кота</legend>
+        <legend class="selection-form__legend visually-hidden">Параметры кота</legend>
           <label class="selection-form__label" for="cat-name-id">
             Имя:<span>*</span>
           </label>
@@ -53,7 +54,7 @@
         </fieldset>
 
         <fieldset class="selection-form__area">
-        <legend class="selection-form__legend selection-form__legend--hidden">Выбор программы</legend>
+        <legend class="selection-form__legend visually-hidden">Выбор программы</legend>
           <label class="selection-form__label" for="slimming-program-id">
             Похудение
           </label>
@@ -69,7 +70,7 @@
         </fieldset>
 
         <fieldset class="selection-form__area">
-        <legend class="selection-form__legend">Контактные данные (владельца кота)</legend>
+        <legend class="selection-form__legend decorative-header">Контактные данные (владельца кота)</legend>
           <label class="selection-form__label" for="email-owner-id">
             E-mail:<span>*</span>
           </label>
@@ -81,12 +82,12 @@
         </fieldset>
 
         <fieldset class="selection-form__area">
-        <legend class="selection-form__legend">Комментарий</legend> 
+          <legend class="selection-form__legend decorative-header">Комментарий</legend>
           <textarea class="selection-form__textarea" name="comment-text" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
         <fieldset class="selection-form__area">
-        <legend class="selection-form__legend">Дополнительно</legend>
+        <legend class="selection-form__legend decorative-header">Дополнительно</legend>
           <label class="selection-form__label" for="sweetener-id">
             Cахарозаменитель
           </label>
