@@ -10,11 +10,12 @@
 
 .product_wrap {
   display: grid;
+  grid-template-columns: 140px auto;
   grid-template-areas:
   "img title"
-  "img feature"
-  "button button";
+  "img feature";
   padding: 0 20px 0 20px;
+  margin: 0 0 13px 0;
 }
 
 .product__link-img {
@@ -28,12 +29,14 @@
   font-weight: 300;
   text-transform: uppercase;
   grid-area: title;
+  margin: 0 0 18px 0;
 }
 
 .product__feature {
   font-family: @arial;
   font-size: 12px;
   line-height: 16px;
+  margin: 0;
   color: @special-dark-grey;
   grid-area: feature;
 }
@@ -44,7 +47,8 @@
 }
 
 .product__button {
-  grid-area: button;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .product__value {
