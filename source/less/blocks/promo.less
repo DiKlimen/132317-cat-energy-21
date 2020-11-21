@@ -6,22 +6,53 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
+  @media (min-width: @tablet) {
+    background-color: @white;
+    color: @black;
+    align-items: normal;
+    padding: 27px 30px 0 30px;
+  }
 }
 
 .promo__title {
   font-size: 36px;
   line-height: 36px;
-  text-align: center;
   margin: 0 0 25px 0;
   font-weight: 400;
+
+  @media (min-width: @tablet) {
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .promo__slogan {
   line-height: 14px;
   margin: 0 0 29px 0;
   text-transform: uppercase;
+
+  @media (min-width: @tablet) {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.promo__image {
+  @media (min-width: @tablet) {
+    align-self: center;
+  }
 }
 
 .promo__link {
   margin-top: auto;
+
+  @media (min-width: @tablet) {
+    width: 244px;
+    position: absolute;
+    top: 300px;
+  }
 }

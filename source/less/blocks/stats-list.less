@@ -2,6 +2,11 @@
   display: grid;
   grid-template-rows: 60px min-content;
   grid-template-columns: auto auto;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .stats-list-item--cost {
@@ -10,6 +15,11 @@
   display: flex;
   font-family: @oswald;
   margin: 0 auto;
+
+  @media (min-width: @tablet) {
+    margin: 0 0 0 auto;
+    flex-direction: column;
+  }
 }
 
 .stats-list__number {
@@ -21,6 +31,20 @@
     font-family: @oswald;
     font-size: 14px;
     line-height: 20px;
+  }
+
+  @media (min-width: @tablet) {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 37px;
+
+    &--cost {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 20px;
+      display: flex;
+      margin-left: auto;
+    }
   }
 }
 
@@ -38,5 +62,17 @@
     text-transform: uppercase;
     order: -1;
     margin-right: 5px;
+  }
+
+  @media (min-width: @tablet) {
+    font-size: 14px;
+    line-height: 14px;
+
+    &--cost {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 9px;
+    }
   }
 }

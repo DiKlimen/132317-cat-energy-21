@@ -1,5 +1,5 @@
 .how-work {
-  padding: 27px 20px 42px 20px;
+  padding: 27px 30px 42px 30px;
 }
 
 .how-work__title {
@@ -7,12 +7,23 @@
   line-height: 40px;
   font-weight: 400;
   margin: 0 0 38px 0;
+
+  @media (min-width: @tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 300;
+  }
 }
 
 .how-work__list {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .how-work__item {
