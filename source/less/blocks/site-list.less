@@ -6,6 +6,10 @@
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: @tablet) {
+    display: flex;
+  }
 }
 
 .site-list__item {
@@ -14,6 +18,15 @@
   &:last-child {
     border-bottom: solid 1px @whisper;
   }
+
+  @media (min-width: @tablet) {
+    border: none;
+    margin-right: 15px;
+
+    &:last-child {
+      border: none;
+    }
+  }
 }
 
 .site-list__item a {
@@ -21,4 +34,9 @@
   text-decoration: none;
   color: @black;
   padding: 22px 20px 24px 20px;
+
+  @media (min-width: @tablet) {
+    font-weight: 300;
+    padding: 0;
+  }
 }
