@@ -10,7 +10,8 @@
 
 .product_wrap {
   display: grid;
-  grid-template-columns: 140px auto;
+  grid-template-rows: min-content 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-areas:
   "img title"
   "img feature";
@@ -20,6 +21,10 @@
 
 .product__link-img {
   grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
 }
 
 .product__title {
@@ -30,6 +35,7 @@
   text-transform: uppercase;
   grid-area: title;
   margin: 0 0 18px 0;
+  width: 50%;
 }
 
 .product__feature {
@@ -44,6 +50,7 @@
 .product__feature-item {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 3px;
 }
 
 .product__button {
