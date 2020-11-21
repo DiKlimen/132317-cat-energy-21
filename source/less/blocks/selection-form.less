@@ -1,5 +1,33 @@
+.selection-form {
+  padding-bottom: 32px;
+}
+
 .selection-form__area {
   border: none;
+  margin: 0 0 27px 0;
+  padding: 0;
+
+  &--radio {
+    padding: 20px 0 22px 0;
+    border-top: 1px solid @border-gray;
+    border-bottom: 1px solid @border-gray;
+  }
+
+  &:last-child {
+    margin-bottom: 34px;
+  }
+
+  &--field .decorative-header {
+    margin-bottom: 32px;
+  }
+
+  &--comment .decorative-header {
+    margin-bottom: 34px;
+  }
+
+  &--extra .decorative-header {
+    margin-bottom: 34px;
+  }
 }
 
 .selection-form__label {
@@ -7,14 +35,38 @@
   text-transform: uppercase;
 }
 
-.selection-form__text {
-  border: 1px solid @input-border;
-  height: 45px;
-  &:hover {
-    border-color: @input-border-hover;
-  }
-  &:focus {
-    border-color: @input-border-focuse;
-    border-width: 2px;
-  }
+.selection-form__radio {
+  margin: 0 15px 0 0;
+}
+
+.selection-form__textarea {
+  width: 100%;
+  min-height: 150px;
+  border: 1px solid @special-dark-grey;
+  padding: 13px 10px 13px 15px;
+  text-transform: uppercase;
+  font-family: @oswald;
+  font-weight: 300;
+  font-size: 16;
+  line-height: 18px;
+}
+
+.selection-form__wrap {
+  padding: 0 20px 0 20px;
+}
+
+.selection-form__item {
+  margin-bottom: 12px;
+}
+
+.selection-form__button {
+  margin-bottom: 21px;
+  padding: 0;
+  border: none;
+}
+
+.selection-form__footnote {
+  font-family: @arial;
+  text-align: center;
+  margin: 0;
 }
