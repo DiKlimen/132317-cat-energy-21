@@ -28,10 +28,6 @@
   &--extra .decorative-header {
     margin-bottom: 34px;
   }
-
-  &--radio .selection-form__radio {
-    margin-right: 15px;
-  }
 }
 
 .selection-form__label {
@@ -40,7 +36,7 @@
 }
 
 .selection-form__radio {
-  margin: 0;
+  margin: 0 15px 0 0;
 }
 
 .selection-form__textarea {
@@ -51,7 +47,7 @@
   text-transform: uppercase;
   font-family: @oswald;
   font-weight: 300;
-  font-size: 16x;
+  font-size: 16;
   line-height: 18px;
 }
 
@@ -59,8 +55,14 @@
   padding: 0 20px 0 20px;
 }
 
+.selection-form__item {
+  margin-bottom: 12px;
+}
+
 .selection-form__button {
-  margin-bottom: 21px;;
+  margin-bottom: 21px;
+  padding: 0;
+  border: none;
 }
 
 .selection-form__footnote {
