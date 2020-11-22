@@ -2,19 +2,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-decoration: none;
   padding: 22px 0 22px 0;
+
+  text-decoration: none;
+
   pointer-events: none;
 }
 
 .copyright__text {
-  font-family: @arial;
   font-size: 16px;
   line-height: 18px;
+  font-family: @arial;
   color: @special-dark-grey;
+
   pointer-events: all;
+
+  @media (min-width: @tablet) {
+    margin-right: 22px;
+
+    pointer-events: auto;
+  }
 }
 
 .copyright__img {
   pointer-events: all;
+
+  @media (min-width: @tablet) {
+    pointer-events: auto;
+  }
 }

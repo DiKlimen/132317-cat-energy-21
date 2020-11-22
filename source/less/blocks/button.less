@@ -1,12 +1,20 @@
 .button {
-  color: @white;
-  line-height: 18px;
-  background-color: @basic-green;
-  text-transform: uppercase;
-  text-decoration: none;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
   min-height: 40px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: @white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: @basic-green;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
