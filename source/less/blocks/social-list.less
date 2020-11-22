@@ -1,9 +1,16 @@
 .social-list {
   list-style: none;
   margin: 0;
-  display: flex;
-  justify-content: center;
   padding: 20px 0 20px 0;
   border-top: 1px solid @border-gray;
   border-bottom: 1px solid @border-gray;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: @tablet) {
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+  }
 }

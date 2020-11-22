@@ -1,11 +1,25 @@
 .example {
   background-color: @example-background;
-  padding: 27px 20px 0 20px;
+  padding: 27px 20px 40px 20px;
   display: flex;
   flex-direction: column;
 
   @media (min-width: @tablet) {
     padding: 43px 30px 67px 30px;
+  }
+}
+
+.example__wrap {
+  @media (min-width: @desktop) {
+    display: grid;
+    grid-template-columns: 436px auto;
+    grid-template-areas:
+    "title img-switch"
+    "description img-switch"
+    "stats img-switch";
+
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -20,16 +34,54 @@
     line-height: 60px;
     font-weight: 300;
   }
+
+  @media (min-width: @desktop) {
+    grid-area: title;
+    margin-bottom: 146px;
+  }
 }
 
 .example__description {
   font-family: @arial;
   margin: 0 0 25px 0;
+
+  @media (min-width: @desktop) {
+    grid-area: description;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 146px;
+  }
+}
+
+.example__stats-list {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop) {
+    grid-area: stats;
+  }
+}
+
+.example__wrap-toggle {
+  grid-area: img-switch;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop) {
+    margin: auto;
+  }
 }
 
 .example__img {
   align-self: center;
   margin-bottom: 20px;
+
+  @media (min-width: @desktop) {
+    grid-area: img;
+  }
 }
 
 .example__switch {

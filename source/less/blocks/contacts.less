@@ -1,6 +1,7 @@
 .contacts {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .contacts--background {
@@ -16,16 +17,32 @@
     justify-content: space-between;
     padding: 28px 70px 22px 70px;
   }
+
+  @media (min-width: @desktop) {
+    position: absolute;
+    width: 570px;
+    padding: 66px 89px 51px 75px;
+    background-color: @white;
+    top: 95px;
+  }
 }
 
 .contacts__text {
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 20px 0 0;
 
   @media (min-width: @tablet) {
     width: 22%;
+    margin: 0;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 21px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 163px;
   }
 }
 
@@ -39,6 +56,10 @@
     width: 25%;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 160px;
   }
 }
 

@@ -4,12 +4,23 @@
   @media (min-width: @tablet) {
     padding: 0 30px 0 30px;
   }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 71px;
+    padding: 0;
+  }
 }
 
 .food-programs_list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .food-programs__item {
@@ -23,6 +34,14 @@
 
   @media (min-width: @tablet) {
     padding: 77px 20px 30px 52px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-right: 52px;
+
+    &:first-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -38,6 +57,10 @@
     font-size: 36px;
     line-height: 36px;
   }
+
+  @media (min-width: @desktop) {
+    padding-left: 162px;
+  }
 }
 
 .food-programs__item p {
@@ -48,6 +71,10 @@
   @media (min-width: @tablet) {
     width: 55%;
     line-height: 24px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 100%;
   }
 }
 
