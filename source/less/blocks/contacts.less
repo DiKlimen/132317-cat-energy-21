@@ -1,7 +1,8 @@
 .contacts {
+  position: relative;
+
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
 .contacts--background {
@@ -10,8 +11,8 @@
 
 .contacts__wrap-text {
   display: flex;
-  padding: 28px 20px 22px 20px;
   min-height: 114px;
+  padding: 28px 20px 22px 20px;
 
   @media (min-width: @tablet) {
     justify-content: space-between;
@@ -20,23 +21,27 @@
 
   @media (min-width: @desktop) {
     position: absolute;
+    top: 95px;
+
     width: 570px;
     padding: 66px 89px 51px 75px;
+
     background-color: @white;
-    top: 95px;
   }
 }
 
 .contacts__text {
+  margin: 0 20px 0 0;
+
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  margin: 0 20px 0 0;
 
   @media (min-width: @tablet) {
     width: 22%;
     margin: 0;
-    font-weight: 300;
+
+    font-weight: 400;
     font-size: 20px;
     line-height: 21px;
   }
@@ -47,15 +52,17 @@
 }
 
 .contacts__address {
-  font-family: @arial;
-  line-height: 18px;
   font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: @arial;
 
   @media (min-width: @tablet) {
-    text-align: right;
     width: 25%;
+
     font-size: 16px;
     line-height: 20px;
+    text-align: right;
   }
 
   @media (min-width: @desktop) {

@@ -1,14 +1,19 @@
 .site-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-  list-style: none;
-  padding: 0;
-  margin: 0;
 
   @media (min-width: @tablet) {
     display: flex;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
@@ -20,24 +25,26 @@
   }
 
   @media (min-width: @tablet) {
-    border: none;
     margin-right: 15px;
 
+    border: none;
+
     &:last-child {
-      border: none;
       margin-right: 0;
+
+      border: none;
     }
   }
 }
 
 .site-list__item a {
   display: block;
-  text-decoration: none;
-  color: @black;
   padding: 22px 20px 24px 20px;
 
+  color: @black;
+  text-decoration: none;
+
   @media (min-width: @tablet) {
-    font-weight: 300;
     padding: 0;
   }
 

@@ -12,21 +12,24 @@
 }
 
 .food-programs_list {
-  list-style: none;
   margin: 0;
   padding: 0;
 
+  list-style: none;
+
   @media (min-width: @desktop) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
     gap: 80px;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 .food-programs__item {
-  background-color: @basic-grey;
-  padding: 30px 20px 0 20px;
   margin: 0 0 20px 0;
+  padding: 30px 20px 0 20px;
+
+  background-color: @basic-grey;
 
   &:last-child {
     margin-bottom: 0;
@@ -46,11 +49,12 @@
 }
 
 .food-programs__title {
-  line-height: 37px;
-  font-size: 24px;
-  text-transform: uppercase;
   margin: 0 0 29px 0;
+
   font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
 
   @media (min-width: @tablet) {
     font-weight: 300;
@@ -64,12 +68,16 @@
 }
 
 .food-programs__item p {
-  font-family: @arial;
-  line-height: 18px;
   margin: 0 13px 23px 0;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: @arial;
 
   @media (min-width: @tablet) {
     width: 55%;
+
+    font-size: 16px;
     line-height: 24px;
   }
 
@@ -79,20 +87,23 @@
 }
 
 .food-programs__link {
+  display: block;
+  padding: 15px 0 15px 0;
+
   font-size: 16px;
   line-height: 16px;
-  text-decoration: none;
   color: @black;
   text-transform: uppercase;
-  padding: 15px 0 15px 0;
-  display: block;
+  text-decoration: none;
+
   border-top: 1px solid @border-gray;
 
   @media (min-width: @tablet) {
-    border: none;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 30px;
     padding: 15px 0 15px 0;
+
+    font-size: 20px;
+    line-height: 27px;
+
+    border: none;
   }
 }

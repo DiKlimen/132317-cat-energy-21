@@ -1,60 +1,69 @@
 .example {
-  background-color: @example-background;
-  padding: 27px 20px 40px 20px;
   display: flex;
   flex-direction: column;
+  padding: 27px 20px 40px 20px;
+
+  background-color: @example-background;
 
   @media (min-width: @tablet) {
     padding: 43px 30px 67px 30px;
   }
 
   @media (min-width: @desktop) {
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
   }
 }
 
 .example__wrap {
   @media (min-width: @desktop) {
     display: grid;
-    grid-template-columns: 436px auto;
-    grid-template-areas:
-    "title img-switch"
+    padding-right: 0;
+    padding-left: 0;
+
+    grid-template-areas: "title img-switch"
     "description img-switch"
     "stats img-switch";
-
-    padding-left: 0;
-    padding-right: 0;
+    grid-template-columns: 436px auto;
   }
 }
 
 .example__title {
-  font-size: 36px;
-  line-height: 40px;
-  font-weight: 400;
   margin: 0 0 33px 0;
 
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+
   @media (min-width: @tablet) {
+    font-weight: 400;
     font-size: 60px;
     line-height: 60px;
-    font-weight: 300;
   }
 
   @media (min-width: @desktop) {
-    grid-area: title;
     margin-bottom: 146px;
+
+    grid-area: title;
   }
 }
 
 .example__description {
-  font-family: @arial;
   margin: 0 0 25px 0;
 
-  @media (min-width: @desktop) {
-    grid-area: description;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: @arial;
+
+  @media (min-width: @tablet) {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: @desktop) {
     margin-bottom: 146px;
+
+    grid-area: description;
   }
 }
 
@@ -71,9 +80,10 @@
 }
 
 .example__wrap-toggle {
-  grid-area: img-switch;
   display: flex;
   flex-direction: column;
+
+  grid-area: img-switch;
 
   @media (min-width: @desktop) {
     margin: auto;
