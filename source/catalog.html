@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
-  <header class="page-header">
+  <header class="page-header container">
     <div class="page-header__wrap">
       <a class="page-header__link-logo" href="index.html">
         <img class="page-header__logo-img" src="img/logo/logo-mobile.svg" width="34" height="36" alt="Логотип сайта Cat Energy">
@@ -35,7 +35,9 @@
   </header>
 
   <main class="page-main page-main--catalog">
-    <h1 class="page-main__title">Каталог продукции</h1>
+    <div class="page-main__title-wrap container">
+      <h1 class="page-main__title">Каталог продукции</h1>
+    </div>
 
     <section class="main-catalog container">
       <h2 class="visually-hidden">Каталог основных товаров</h2>
@@ -249,52 +251,54 @@
       </div>
     </section>
 
-    <section class="extra-catalog">
+    <section class="extra-catalog container">
       <h2 class="extra-catalog__title decorative-header">Дополнительные товары</h2>
-      <ul class="extra-catalog__product-list extra-product">
-        <li class="extra-product__item">
-          <div class="extra-product__item__inner">
-            <h3 class="extra-product__title">Сахарозаменитель</h3>
-            <dl class="extra-product__feature">
-              <dt class="extra-product__quantity">1 упаковка (100г)</dt>
-              <dd class="extra-product__value">200 Р.</dd>
-            </dl>
-            <a class="extra-product__button button" href="#">Заказать</a>
-          </div>
-        </li>
-        <li class="extra-product__item">
-          <div class="extra-product__item__inner">
-            <h3 class="extra-product__title">Питевая вода</h3>
-            <dl class="extra-product__feature">
-              <dt class="extra-product__quantity">5 литров</dt>
-              <dd class="extra-product__value">50 Р.</dd>
-            </dl>
-            <a class="extra-product__button button" href="#">Заказать</a>
-          </div>
-        </li>
-        <li class="extra-product__item">
-          <div class="extra-product__item__inner">
-            <h3 class="extra-product__title">Молоко</h3>
-            <dl class="extra-product__feature">
-              <dt class="extra-product__quantity">1 литр</dt>
-              <dd class="extra-product__value">100 Р.</dd>
-            </dl>
-            <a class="extra-product__button button" href="#">Заказать</a>
-          </div>
-        </li>
-        <li class="extra-product__item">
-          <div class="extra-product__item__inner">
-            <h3 class="extra-product__title">Витамины</h3>
-            <dl class="extra-product__feature">
-              <dt class="extra-product__quantity">1 упаковка (30г)</dt>
-              <dd class="extra-product__value">300 Р.</dd>
-            </dl>
-            <a class="extra-product__button button" href="#">Заказать</a>
-          </div>
-        </li>
-      </ul>
-      <div class="extra-catalog__present present">
-        <p class="present__text">Закажите все и получите чехол для кота в подарок!</p>
+      <div class="extra-catalog__wrap">
+        <ul class="extra-catalog__product-list extra-product">
+          <li class="extra-product__item">
+            <div class="extra-product__item__inner">
+              <h3 class="extra-product__title">Сахарозаменитель</h3>
+              <dl class="extra-product__feature">
+                <dt class="extra-product__quantity">1 упаковка (100г)</dt>
+                <dd class="extra-product__value">200 Р.</dd>
+              </dl>
+              <a class="extra-product__button button" href="#">Заказать</a>
+            </div>
+          </li>
+          <li class="extra-product__item">
+            <div class="extra-product__item__inner">
+              <h3 class="extra-product__title">Питевая вода</h3>
+              <dl class="extra-product__feature">
+                <dt class="extra-product__quantity">5 литров</dt>
+                <dd class="extra-product__value">50 Р.</dd>
+              </dl>
+              <a class="extra-product__button button" href="#">Заказать</a>
+            </div>
+          </li>
+          <li class="extra-product__item">
+            <div class="extra-product__item__inner">
+              <h3 class="extra-product__title">Молоко</h3>
+              <dl class="extra-product__feature">
+                <dt class="extra-product__quantity">1 литр</dt>
+                <dd class="extra-product__value">100 Р.</dd>
+              </dl>
+              <a class="extra-product__button button" href="#">Заказать</a>
+            </div>
+          </li>
+          <li class="extra-product__item">
+            <div class="extra-product__item__inner">
+              <h3 class="extra-product__title">Витамины</h3>
+              <dl class="extra-product__feature">
+                <dt class="extra-product__quantity">1 упаковка (30г)</dt>
+                <dd class="extra-product__value">300 Р.</dd>
+              </dl>
+              <a class="extra-product__button button" href="#">Заказать</a>
+            </div>
+          </li>
+        </ul>
+        <div class="extra-catalog__present present">
+          <p class="present__text">Закажите все и получите чехол для кота в подарок!</p>
+        </div>
       </div>
     </section>
 
