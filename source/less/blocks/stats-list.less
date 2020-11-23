@@ -23,24 +23,27 @@
 }
 
 .stats-list-item--decor {
-  border: 1px solid @very-light-grey;
-  border-radius: 4px;
+  position: relative;
+
   width: 124px;
   height: 64px;
-  text-align: center;
   padding-top: 14px;
-  position: relative;
+
+  text-align: center;
+
+  border: 1px solid @very-light-grey;
+  border-radius: 4px;
 
   &:nth-child(2) {
     margin-left: auto;
   }
 
   @media (min-width: @tablet) {
+    width: 162px;
+    height: 77px;
     &:first-child {
       margin-right: 42px;
     }
-    width: 162px;
-    height: 77px;
 
     &:nth-child(2) {
       margin-left: 0;
@@ -49,16 +52,18 @@
 }
 
 .stats-list-item--cost {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  font-family: @oswald;
   display: flex;
   justify-content: center;
   margin-top: 30px;
 
+  font-family: @oswald;
+
+  grid-column-end: -1;
+  grid-column-start: 1;
+
   @media (min-width: @tablet) {
-    margin: 0 0 0 auto;
     flex-direction: column;
+    margin: 0 0 0 auto;
   }
 
   @media (min-width: @desktop) {
@@ -73,9 +78,9 @@
   text-transform: uppercase;
 
   &--cost {
-    font-family: @oswald;
     font-size: 14px;
     line-height: 20px;
+    font-family: @oswald;
   }
 
   @media (min-width: @tablet) {
@@ -84,29 +89,32 @@
     line-height: 37px;
 
     &--cost {
+      display: flex;
+      margin-left: auto;
+
       font-weight: 300;
       font-size: 20px;
       line-height: 20px;
-      display: flex;
-      margin-left: auto;
     }
   }
 }
 
 .stats-list__description {
+  margin: 0;
+
   font-size: 12px;
   line-height: 12px;
-  text-transform: lowercase;
-  margin: 0;
   font-family: @arial;
+  text-transform: lowercase;
 
   &--cost {
-    font-family: @oswald;
-    font-size: 14px;
-    line-height: 20px;
-    text-transform: uppercase;
     order: -1;
     margin-right: 5px;
+
+    font-size: 14px;
+    line-height: 20px;
+    font-family: @oswald;
+    text-transform: uppercase;
 
     @media (min-width: @desktop) {
       margin-right: 63px;
@@ -115,9 +123,11 @@
 
   &--decor {
     position: absolute;
-    background-color: @example-background;
-    width: 50%;
     top: 53px;
+
+    width: 50%;
+
+    background-color: @example-background;
     transform: translateX(50%);
 
     @media (min-width: @tablet) {
@@ -130,10 +140,11 @@
     line-height: 14px;
 
     &--cost {
+      margin-bottom: 9px;
+
       font-weight: 300;
       font-size: 20px;
       line-height: 20px;
-      margin-bottom: 9px;
     }
   }
 }
