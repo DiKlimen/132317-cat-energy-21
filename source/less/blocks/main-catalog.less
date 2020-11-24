@@ -3,4 +3,22 @@
   padding: 0;
 
   list-style: none;
+  display: grid;
+  row-gap: 25px;
+
+  @media (min-width: @tablet) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 60px;
+    column-gap: 59px;
+    padding: 0 30px 0 30px;
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 63px;
+    column-gap: 80px;
+    margin-bottom: 76px;
+    padding: 0;
+  }
 }

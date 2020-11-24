@@ -18,13 +18,10 @@
 .example__wrap {
   @media (min-width: @desktop) {
     display: grid;
-    padding-right: 0;
-    padding-left: 0;
-
-    grid-template-areas: "title img-switch"
-    "description img-switch"
-    "stats img-switch";
     grid-template-columns: 436px auto;
+    grid-template-areas: "title img-switch" "description img-switch" "stats img-switch";
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

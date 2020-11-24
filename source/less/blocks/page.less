@@ -21,12 +21,18 @@
   color: @black;
 
   grid-template-rows: min-content 1fr min-content;
+
+  @media (min-width: @tablet) {
+    overflow-x: hidden;
+  }
 }
 
 .page__header-wrap {
   @media (min-width: @desktop) {
     margin-bottom: 82px;
 
-    background-color: @green-background;
+    &--index {
+      background-color: @green-background;
+    }
   }
 }

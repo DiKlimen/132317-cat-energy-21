@@ -2,6 +2,15 @@
   padding-bottom: 32px;
 }
 
+.selection-form__cat-and-programm-wrap {
+  @media (min-width: @desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    margin-bottom: 65px;
+  }
+}
+
 .selection-form__area {
   margin: 0 0 27px 0;
   padding: 0;
@@ -13,22 +22,63 @@
 
     border-top: 1px solid @border-gray;
     border-bottom: 1px solid @border-gray;
+
+    @media (min-width: @tablet) {
+      border-left: 1px solid @border-gray;
+      border-right: 1px solid @border-gray;
+      padding: 25px 20px 25px 30px;
+      margin-bottom: 75px;
+    }
+  }
+
+  &--comment {
+    margin-bottom: 65px;
+  }
+
+  &--contact {
+    margin-bottom: 70px;
+  }
+
+  &--contact .text-form-item {
+    margin: 0;
   }
 
   &:last-child {
     margin-bottom: 34px;
+
+    @media (min-width: @desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--field {
+    @media (min-width: @tablet) {
+      margin-bottom: 72px;
+    }
   }
 
   &--field .decorative-header {
     margin-bottom: 32px;
+
+    @media (min-width: @tablet) {
+      margin-bottom: 65px;
+    }
   }
 
   &--comment .decorative-header {
     margin-bottom: 34px;
+
+    @media (min-width: @tablet) {
+      margin-bottom: 65px;
+    }
   }
 
   &--extra .decorative-header {
     margin-bottom: 34px;
+
+    @media (min-width: @tablet) {
+      margin-bottom: 57px;
+    }
   }
 }
 
@@ -36,6 +86,11 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 27px;
+  }
 }
 
 .selection-form__radio {
@@ -52,11 +107,42 @@
   font-family: @oswald;
   text-transform: uppercase;
 
-  border: 1px solid @special-dark-grey;
+  border: 1px solid @input-border;
+
+  resize: none;
+
+  @media (min-width: @desktop) {
+    min-height: 174px;
+  }
 }
 
 .selection-form__wrap {
   padding: 0 20px 0 20px;
+
+  @media (min-width: @tablet) {
+    padding: 0;
+
+    &--extra {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 32px;
+      column-gap: 123px;
+      width: 90%;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &--desktop {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 80px;
+    }
+
+    &--extra {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      width: 100%;
+    }
+  }
 }
 
 .selection-form__item {
@@ -68,6 +154,18 @@
   padding: 0;
 
   border: none;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: @oswald;
+
+  @media (min-width: @tablet) {
+    width: 45%;
+    margin: 0 61px 0 0;
+    height: 52px;
+    font-size: 20px;
+  }
 }
 
 .selection-form__footnote {

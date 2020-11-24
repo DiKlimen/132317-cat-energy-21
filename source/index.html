@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
-  <div class="page__header-wrap">
+  <div class="page__header-wrap page__header-wrap--index">
     <header class="page-header container">
       <div class="page-header__wrap">
         <a class="page-header__link-logo" href="#">
@@ -87,8 +87,8 @@
       <div class="example__wrap container">
         <h2 class="example__title">Живой пример</h2>
         <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <dl class="example__stats-list stats-list">
-          <div class="stats-list__wrap-decor">
+        <div class="example__stats-list stats-list">
+          <dl class="stats-list__wrap-decor">
             <div class="stats-list-item stats-list-item--decor">
               <dt class="stats-list__number">5 кг</dt>
               <dd class="stats-list__description stats-list__description--decor">Снижение веса</dd>
@@ -97,12 +97,12 @@
               <dt class="stats-list__number">60 дней</dt>
               <dd class="stats-list__description stats-list__description--decor">Затрачено времени</dd>
             </div>
-          </div>
-          <div class="stats-list-item stats-list-item--cost">
+          </dl>
+          <dl class="stats-list-item stats-list-item--cost">
             <dt class="stats-list__number stats-list__number--cost">15 000 Руб.</dt>
             <dd class="stats-list__description stats-list__description--cost">Затраты на питание:</dd>
-          </div>
-        </dl>
+          </dl>
+        </div>
         <div class="example__wrap-toggle">
           <img class="example__img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Живой пример кота">
           <div class="example__switch switch">
@@ -122,7 +122,6 @@
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
       </div>
-
       <img class="contacts__map" src="img/location.jpg" width="320" height="362" alt="Картинка заглушка">
     </section>
   </main>
