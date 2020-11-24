@@ -7,79 +7,81 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
-  <div class="page__header-wrap">
-    <header class="page-header container">
-      <div class="page-header__wrap">
-        <a class="page-header__link-logo" href="#">
-          <img class="page-header__logo-img" src="img/logo/logo-mobile.svg" width="34" height="36" alt="Логотип сайта Cat Energy">
-          <img class="page-header__logo-text" src="img/logo/logo-text-header.svg" width="101" height="18" alt="Название сайта Cat Energy">
-        </a>
-        <button class="main-nav-toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+  <header class="page-header container">
+    <div class="page-header__wrap">
+      <a class="page-header__link-logo" href="index.html">
+        <img class="page-header__logo-img" src="img/logo/logo-mobile.svg" width="34" height="36" alt="Логотип сайта Cat Energy">
+        <img class="page-header__logo-text" src="img/logo/logo-text-header.svg" width="101" height="18" alt="Название сайта Cat Energy">
+      </a>
+      <button class="main-nav-toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    </div>
+    <nav class="main-nav main-nav--inside">
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html">Каталог продукци</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Подбор программы</a>
+          </li>
+        </ul>
       </div>
-      <nav class="main-nav main-nav--inside">
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог продукци</a>
-            </li>
-            <li class="site-list__item">
-              <a>Подбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-  </div>
+    </nav>
+  </header>
+
   <main class="page-main">
-    <section class="program-selection">
+    <section class="program-selection container">
       <h1 class="program-selection__title">Подбор программы</h1>
-      <p class="program-selection__desctiption">Заколните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="program-selection__desctiption">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <form class="program-selection__form selection-form" action="https://echo.htmlacademy.ru" method="get">
 
-        <div class="selection-form__area selection-form__area--field">
-        <h2 class="selection-form__legend visually-hidden">Параметры кота</h2>
-          <div class="selection-form__wrap selection-form__wrap--input-text">
-            <div class="selection-form__item text-form-item">
-              <label class="selection-form__label" for="cat-name-id">Имя:<span>*</span></label>
-              <input class="selection-form__text input-text" type="text" name="cat-name" id="cat-name-id" placeholder="Барсик">
+        <div class="selection-form__cat-and-programm-wrap">
+          <div class="selection-form__area selection-form__area--field">
+            <h2 class="selection-form__legend visually-hidden">Параметры кота</h2>
+            <div class="selection-form__wrap selection-form__wrap--input-text">
+              <div class="selection-form__item text-form-item">
+                <label class="selection-form__label" for="cat-name-id">Имя:<span>*</span></label>
+                <input class="selection-form__text input-text" type="text" name="cat-name" id="cat-name-id" placeholder="Барсик">
+              </div>
+              <div class="selection-form__item text-form-item">
+                <label class="selection-form__label" for="cat-weight-id">Вес (кг):<span>*</span></label>
+                <input class="selection-form__text input-text" type="text" name="cat-weight" id="cat-weight-id" placeholder="7">
+              </div>
+              <div class="selection-form__item text-form-item">
+                <label class="selection-form__label" for="cat-old-id">Возраст (лет):</label>
+                <input class="selection-form__text input-text" type="text" name="cat-old" id="cat-old-id" placeholder="7">
+              </div>
             </div>
-            <div class="selection-form__item text-form-item">
-              <label class="selection-form__label" for="cat-weight-id">Вес (кг):<span>*</span></label>
-              <input class="selection-form__text input-text" type="text" name="cat-weight" id="cat-weight-id" placeholder="7">
-            </div>
-            <div class="selection-form__item text-form-item">
-              <label class="selection-form__label" for="cat-old-id">Возраст (лет):</label>
-              <input class="selection-form__text input-text" type="text" name="cat-old" id="cat-old-id" placeholder="7">
+          </div>
+
+          <div class="selection-form__area selection-form__area--radio">
+            <h2 class="selection-form__legend visually-hidden">Выбор программы</h2>
+            <div class="selection-form__wrap selection-form__wrap--input-radio">
+              <div class="selection-form__item selection-form__item--radio">
+                <input class="selection-form__radio" type="radio" name="choice-program" id="slimming-program-id" value="slimming" checked>
+                <label class="selection-form__label" for="slimming-program-id">Похудение</label>
+              </div>
+              <div class="selection-form__item selection-form__item--radio">
+                <input class="selection-form__radio" type="radio" name="choice-program" id="mas-program-id" value="mass">
+                <label class="selection-form__label" for="mas-program-id">Набор массы</label>
+              </div>
+              <div class="selection-form__item selection-form__item--radio">
+                <input class="selection-form__radio" type="radio" name="choice-program" id="question-program-id" value="question">
+                <label class="selection-form__label" for="question-program-id">Не знаю (нужет ваш совет)</label>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="selection-form__area selection-form__area--radio">
-        <h2 class="selection-form__legend visually-hidden">Выбор программы</h2>
-          <div class="selection-form__wrap selection-form__wrap--input-radio">
-            <div class="selection-form__item selection-form__item--radio">
-              <input class="selection-form__radio" type="radio" name="choice-program" id="slimming-program-id" value="slimming" checked>
-              <label class="selection-form__label" for="slimming-program-id">Похудение</label>
-            </div>
-            <div class="selection-form__item selection-form__item--radio">
-              <input class="selection-form__radio" type="radio" name="choice-program" id="mas-program-id" value="mass">
-              <label class="selection-form__label" for="mas-program-id">Набор массы</label>
-            </div>
-            <div class="selection-form__item selection-form__item--radio">
-              <input class="selection-form__radio" type="radio" name="choice-program" id="question-program-id" value="question">
-              <label class="selection-form__label" for="question-program-id">Не знаю (нужет ваш совет)</label>
-            </div>
-          </div>
-        </div>
 
-        <div class="selection-form__area selection-form__area--field">
+        <div class="selection-form__area selection-form__area--field selection-form__area--contakt">
           <h2 class="selection-form__legend decorative-header">Контактные данные (владельца кота)</h2>
-          <div class="selection-form__wrap selection-form__wrap--input-text">
+          <div class="selection-form__wrap selection-form__wrap--input-text selection-form__wrap--desktop">
             <div class="selection-form__item text-form-item">
               <label class="selection-form__label" for="email-owner-id">E-mail:<span>*</span></label>
               <input class="selection-form__text input-text" type="email" name="email-owner" id="email-owner-id" placeholder="кuklachev@gmail.com">
@@ -119,8 +121,10 @@
             </div>
           </div>
       </div>
-      <button class="selection-form__button button" type="submit">Отправить заявку</button>
-      <p class="selection-form__footnote"><span>*</span> — Обязательные поля</p>
+      <div class="program-selection__button-wrap">
+        <button class="selection-form__button button" type="submit">Отправить заявку</button>
+        <p class="selection-form__footnote"><span>*</span> — Обязательные поля</p>
+      </div>
       </form>
     </section>
 
