@@ -1,5 +1,43 @@
 .main-nav-toggle {
+  width: 24px;
+  height: 16px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  background-color: @white;
+
   @media (min-width: @tablet) {
     display: none;
+  }
+}
+
+.main-nav-toggle__line {
+  display: block;
+  position: absolute;
+  height: 1.5px;
+  width: 100%;
+  background-color: @black;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    height: 1.5px;
+    width: 100%;
+    background-color: @black;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    height: 1.5px;
+    width: 100%;
+    background-color: @black;
   }
 }
