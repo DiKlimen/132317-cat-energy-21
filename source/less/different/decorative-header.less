@@ -5,6 +5,8 @@
   font-family: @oswald;
   font-weight: 300;
   margin-top: 0;
+  position: relative;
+  display: inline-flex;
 
   @media (min-width: @tablet) {
     font-weight: 300;
@@ -12,4 +14,26 @@
     line-height: 36px;
     padding: 0;
   }
+}
+
+.decorative-header::before,
+.decorative-header::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 2px;
+  top: 22px;
+  // background-color: green;
+}
+
+.decorative-header::before {
+  background-color: green;
+  left: -20px;
+  transform: translateX(-100%);
+}
+
+.decorative-header::after {
+  transform: translateX(100%);
+  background-color: red;
+  right: -20px;
 }
