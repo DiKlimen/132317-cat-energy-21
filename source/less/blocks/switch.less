@@ -35,16 +35,12 @@
   }
 }
 
-
-
 .switch__scale {
   display: none;
 
   @media (min-width: @tablet) {
     display: block;
     width: 428px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     outline: none;
     background: transparent;
@@ -58,8 +54,6 @@
   }
 
   &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     background-color: @basic-green;
     height: 34px;
@@ -67,18 +61,14 @@
     border-radius: 50%;
     border: 13px solid white;
     margin-top: -14px;
-    box-shadow:
-    0 0 0 1px @border-gray,
-    0 1px 3px @shadow;
+    box-shadow: 0 0 0 1px @border-gray, 0 1px 3px @shadow;
 
     &:hover {
-      box-shadow: 0 0 0 1px @border-gray,
-      0 2px 4px @shadow-hover;
+      box-shadow: 0 0 0 1px @border-gray, 0 2px 4px @shadow-hover;
     }
 
     &:active {
-      box-shadow: 0 0 0 1px @basic-green,
-      0 2px 4px @shadow-hover;
+      box-shadow: 0 0 0 1px @basic-green, 0 2px 4px @shadow-hover;
     }
   }
 
@@ -89,8 +79,6 @@
   }
 
   &::-moz-range-thumb {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     background-color: @basic-green;
     height: 8px;
@@ -98,18 +86,14 @@
     border-radius: 50%;
     border: 12px solid white;
     margin-top: -14px;
-    box-shadow:
-    0 0 0 1px @border-gray,
-    0 1px 3px @shadow;
+    box-shadow: 0 0 0 1px @border-gray, 0 1px 3px @shadow;
 
     &:hover {
-      box-shadow: 0 0 0 1px @border-gray,
-      0 2px 4px @shadow-hover;
+      box-shadow: 0 0 0 1px @border-gray, 0 2px 4px @shadow-hover;
     }
 
     &:active {
-      box-shadow: 0 0 0 1px @basic-green,
-      0 2px 4px @shadow-hover;
+      box-shadow: 0 0 0 1px @basic-green, 0 2px 4px @shadow-hover;
     }
   }
 }

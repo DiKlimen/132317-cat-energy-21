@@ -44,6 +44,10 @@
     line-height: 60px;
     color: @black;
   }
+
+  @media (min-width: @desktop) {
+    width: 414px;
+  }
 }
 
 .promo__slogan {
@@ -60,12 +64,23 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: @desktop) {
+    width: 414px;
+  }
 }
 
 .promo__image {
+  position: relative;
+
   @media (min-width: @tablet) {
     order: 4;
     align-self: center;
+  }
+
+  @media (min-width: @desktop) {
+    left: 50px;
+    top: -200px;
   }
 }
 
