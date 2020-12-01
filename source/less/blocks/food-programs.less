@@ -38,6 +38,7 @@
   padding: 30px 20px 0 20px;
 
   background-color: @basic-grey;
+  display: grid;
 
   &:last-child {
     margin-bottom: 0;
@@ -45,9 +46,13 @@
 
   @media (min-width: @tablet) {
     padding: 77px 20px 30px 52px;
+    grid-template-columns: 60% 1fr;
+    grid-template-areas: "title img" "text img" "link img";
   }
 
   @media (min-width: @desktop) {
+    grid-template-columns: 100px 1fr;
+    grid-template-areas: "img title" "text text" "link link";
     padding-right: 52px;
 
     &:first-child {
@@ -56,9 +61,14 @@
   }
 }
 
+.food-programs__img {
+  @media (min-width: @tablet) {
+    grid-area: img;
+  }
+}
+
 .food-programs__title {
   margin: 0 0 29px 0;
-
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
@@ -69,14 +79,12 @@
     font-size: 36px;
     line-height: 36px;
     padding: 0;
-  }
-
-  @media (min-width: @desktop) {
-    padding-left: 162px;
+    grid-area: title;
   }
 }
 
-.food-programs__item p {
+.food-programs__text {
+
   margin: 0 13px 23px 0;
 
   font-size: 14px;
@@ -84,8 +92,7 @@
   font-family: @arial;
 
   @media (min-width: @tablet) {
-    width: 55%;
-
+    grid-area: text;
     font-size: 16px;
     line-height: 24px;
   }
@@ -96,8 +103,10 @@
 }
 
 .food-programs__link {
-  display: block;
+  display: inline-block;
   padding: 15px 0 15px 0;
+  position: relative;
+
 
   font-size: 16px;
   line-height: 16px;
@@ -107,8 +116,23 @@
 
   border-top: 1px solid @border-gray;
 
+  &::after {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 10px;
+    background-image: url("/img/icon_arrow.svg");
+    transform: translateX(70%);
+    top: 17px;
+
+    @media (min-width: @tablet) {
+      top: 22px;
+    }
+  }
+
   @media (min-width: @tablet) {
     padding: 15px 0 15px 0;
+    grid-area: link;
 
     font-size: 20px;
     line-height: 27px;
