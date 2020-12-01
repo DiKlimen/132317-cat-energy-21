@@ -9,10 +9,15 @@
 
   color: @white;
 
-  // background-color: @green-background;
-  background-image: url("/img/index-background-desktop 2.jpg");
+  background-image: url("/img/backgruond-header-mobile.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("/img/backgruond-header-mobile@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
 
   @media (min-width: @tablet) {
     align-items: normal;

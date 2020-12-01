@@ -12,7 +12,11 @@
       <header class="page-header container">
         <div class="page-header__wrap">
           <a class="page-header__link-logo" href="#">
-            <img class="page-header__logo-img" src="img/logo/logo-mobile.svg" width="34" height="36" alt="Логотип сайта Cat Energy">
+            <picture>
+              <source media="(min-width: 1220px)" srcset="img/logo/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+              <img class="page-header__logo-img" src="img/logo/logo-mobile.svg" width="34" height="36" alt="Логотип сайта Cat Energy">
+            </picture>
             <img class="page-header__logo-text" src="img/logo/logo-text-header.svg" width="101" height="18" alt="Название сайта Cat Energy">
           </a>
           <button class="main-nav-toggle" type="button">
@@ -40,7 +44,10 @@
       <section class="promo container">
         <h1 class="promo__title">Функциональное питание для котов</h1>
         <p class="promo__slogan">Занялся собой? Займись и котом!</p>
-        <img class="promo__image" src="/img/index-can-mobile 1.png" width="280" height="270" alt="Одна порция Cat Energy">
+        <picture>
+          <source media="(min-width: 768px)" srcset="/img/index-can-tablet.png 1x", srcset="/img/index-can-tablet@2x.png 2x">
+          <img class="promo__image" src="/img/index-can-mobile.png" srcset="/img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Одна порция Cat Energy">
+        </picture>
         <a class="promo__link button" href="#"><span class="button__text">Подобрать программу</span></a>
       </section>
     </div>
@@ -178,7 +185,10 @@
           </dl>
         </div>
         <div class="example__wrap-toggle">
-          <img class="example__img" src="/img/before-mobile 1.png" width="311" height="232" alt="Живой пример кота">
+          <picture>
+            <source media="(min-width: 768px)" srcset="/img/image_cat_tablet.png 1x, img/image_cat_tablet@2x.png 2x">
+            <img class="example__img" src="/img/before-mobile.png" srcset="/img/before-mobile@2x.png 2x" width="311" height="232" alt="Живой пример кота">
+          </picture>
           <div class="example__switch switch">
               <button type="button" class="switch__button switch__button--before">Было</button>
 
