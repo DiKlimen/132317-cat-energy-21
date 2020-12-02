@@ -79,6 +79,7 @@
 .example__wrap-toggle {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   grid-area: img-switch;
 
@@ -89,6 +90,11 @@
 
 .example__img {
   margin: 0 auto 20px auto;
+
+  @media (min-width: @tablet) {
+    width: 708px;
+    height: 620px;
+  }
 
   @media (min-width: @desktop) {
     grid-area: img;

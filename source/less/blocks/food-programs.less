@@ -39,6 +39,8 @@
 
   background-color: @basic-grey;
   display: grid;
+  grid-template-areas: "img title" "text text" "link link";
+  grid-template-columns: 35% 1fr;
 
   &:last-child {
     margin-bottom: 0;
@@ -51,7 +53,7 @@
   }
 
   @media (min-width: @desktop) {
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 170px 1fr;
     grid-template-areas: "img title" "text text" "link link";
     padding-right: 52px;
 
@@ -62,8 +64,18 @@
 }
 
 .food-programs__img {
+  height: 53px;
+  width: 67px;
+  grid-area: img;
+
   @media (min-width: @tablet) {
-    grid-area: img;
+    height: 211px;
+    width: 268px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 134px;
+    height: 106px;
   }
 }
 
@@ -81,18 +93,22 @@
     padding: 0;
     grid-area: title;
   }
+
+  @media (min-width: @desktop) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .food-programs__text {
 
   margin: 0 13px 23px 0;
-
+  grid-area: text;
   font-size: 14px;
   line-height: 18px;
   font-family: @arial;
 
   @media (min-width: @tablet) {
-    grid-area: text;
     font-size: 16px;
     line-height: 24px;
   }
@@ -106,6 +122,7 @@
   display: inline-block;
   padding: 15px 0 15px 0;
   position: relative;
+  grid-area: link;
 
 
   font-size: 16px;
@@ -132,7 +149,6 @@
 
   @media (min-width: @tablet) {
     padding: 15px 0 15px 0;
-    grid-area: link;
 
     font-size: 20px;
     line-height: 27px;
