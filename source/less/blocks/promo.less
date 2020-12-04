@@ -33,7 +33,7 @@
   @media (min-width: @desktop) {
     background-color: transparent;
     padding-top: 0;
-    display: grid;
+    // display: grid;
     grid-template-areas: "text img";
   }
 }
@@ -93,6 +93,7 @@
 
   @media (min-width: @desktop) {
     grid-area: img;
+    position: absolute;
   }
 }
 
@@ -121,9 +122,6 @@
   }
 
   @media (min-width: @desktop) {
-    grid-area: text;
     height: 20px;
-    order: 0;
-    margin: auto;
   }
 }
