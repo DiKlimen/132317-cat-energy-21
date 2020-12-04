@@ -1,21 +1,37 @@
 .present {
   min-height: 289px;
 
-  background-image: url("/img/present.jpg");
+  background-image: url("/img/present-mobil.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 0;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("/img/present-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet) {
     display: flex;
     align-items: center;
     padding: 0 0 0 423px;
+    background-image: url("/img/present-tablet.jpg");
+    background-size: 100%;
+    min-height: 200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/present-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop) {
     width: 245px;
     padding: 0;
     justify-content: center;
+    background-image: url("/img/present-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/present-desktop@2x.jpg");
+    }
   }
 }
 
