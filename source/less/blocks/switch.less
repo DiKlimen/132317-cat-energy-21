@@ -1,5 +1,101 @@
 .switch {
   display: flex;
+  align-items: center;
+}
+
+.switch__simple {
+  width: 84px;
+  height: 14px;
+  background-color: @white;
+  border-radius: 6px;
+  border: 1px solid @border-gray;
+  margin: 0 7px 0 7px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 6px;
+    background-color: @basic-green;
+    width: 42%;
+    border-radius: 6px;
+    left: 6px;
+  }
+
+
+  &--after::before {
+    transform: translateX(100%);
+  }
+
+
+  @media (min-width: @tablet) {
+    display: none;
+  }
+}
+
+.switch__scale {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: block;
+    width: 428px;
+    appearance: none;
+    outline: none;
+    background: transparent;
+    margin: 3px 10px 0 10px;
+  }
+
+  &::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 5px;
+    background-color: @very-light-grey;
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    background-color: @basic-green;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    border: 13px solid white;
+    margin-top: -14px;
+    box-shadow: 0 0 0 1px @border-gray, 0 1px 3px @shadow;
+
+    &:hover {
+      box-shadow: 0 0 0 1px @border-gray, 0 2px 4px @shadow-hover;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 1px @basic-green, 0 2px 4px @shadow-hover;
+    }
+  }
+
+  &::-moz-range-track {
+    height: 6px;
+    border-radius: 5px;
+    background-color: @very-light-grey;
+  }
+
+  &::-moz-range-thumb {
+    appearance: none;
+    background-color: @basic-green;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    border: 12px solid white;
+    margin-top: -14px;
+    box-shadow: 0 0 0 1px @border-gray, 0 1px 3px @shadow;
+
+    &:hover {
+      box-shadow: 0 0 0 1px @border-gray, 0 2px 4px @shadow-hover;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 1px @basic-green, 0 2px 4px @shadow-hover;
+    }
+  }
 }
 
 .switch__button {
@@ -10,6 +106,7 @@
 
   background-color: transparent;
   border: none;
+  display: block;
 
   @media (min-width: @tablet) {
     font-weight: 300;

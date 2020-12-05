@@ -7,7 +7,13 @@
     margin-bottom: 65px;
   }
 
+  @media (min-width: @tablet) {
+    min-height: 77px;
+    align-items: flex-end;
+  }
+
   @media (min-width: @desktop) {
+    min-height: 112px;
     padding: 0;
   }
 }
@@ -32,6 +38,14 @@
   width: 50%;
 
   pointer-events: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-header__logo-img {
@@ -39,6 +53,13 @@
 
   @media (min-width: @tablet) {
     margin-right: 20px;
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 202px;
+    height: 59px;
   }
 }
 
@@ -49,5 +70,6 @@
 
   @media (min-width: @tablet) {
     transform: none;
+    display: none;
   }
 }

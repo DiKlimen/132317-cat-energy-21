@@ -13,6 +13,14 @@
   }
 }
 
+.show-more_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: auto;
+  padding: 0 36px;
+}
+
 .show-more__text {
   margin: auto 0 8px 0;
 
@@ -46,13 +54,9 @@
 }
 
 .show-more__button-wrap {
+  align-self: stretch;
+
   @media (min-width: @tablet) {
     align-self: stretch;
   }
-}
-
-.show-more__button {
-  color: @special-dark-grey;
-
-  background-color: @basic-grey;
 }

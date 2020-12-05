@@ -2,7 +2,7 @@
   padding-bottom: 32px;
 }
 
-.selection-form__cat-and-programm-wrap {
+.selection-form__options-and-programm-wrap {
   @media (min-width: @desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -17,7 +17,13 @@
 
   border: none;
 
-  &--radio {
+  &--options {
+    @media (min-width: @desktop) {
+      margin: 0;
+    }
+  }
+
+  &--program {
     padding: 20px 0 22px 0;
 
     border-top: 1px solid @border-gray;
@@ -39,6 +45,12 @@
     margin-bottom: 70px;
   }
 
+  &--contact .selection-form__item {
+    @media (min-width: @desktop) {
+      margin: 0;
+    }
+  }
+
   &--contact .text-form-item {
     margin: 0;
   }
@@ -48,20 +60,6 @@
 
     @media (min-width: @desktop) {
       margin-bottom: 0;
-    }
-  }
-
-  &--field {
-    @media (min-width: @tablet) {
-      margin-bottom: 72px;
-    }
-  }
-
-  &--field .decorative-header {
-    margin-bottom: 32px;
-
-    @media (min-width: @tablet) {
-      margin-bottom: 65px;
     }
   }
 
@@ -82,14 +80,92 @@
   }
 }
 
+.selection-form__legend {
+  padding: 0 20px;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet) {
+    padding: 0;
+    margin-bottom: 65px;
+  }
+}
+
 .selection-form__label {
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  position: relative;
+
+  &--email,
+  &--tel {
+    display: flex;
+    width: 100%;
+    margin-right: 0;
+    align-items: center;
+  }
+
+  &--email::after {
+    position: absolute;
+    content: "";
+    width: 19px;
+    height: 14px;
+    background-image: url("../img/input-icon/icon_email.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    right: 14px;
+
+    @media (min-width: @tablet) {
+      right: 19px;
+    }
+  }
+
+  &--tel::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/input-icon/phone.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    right: 12px;
+
+    @media (min-width: @tablet) {
+      right: 15px;
+    }
+  }
 
   @media (min-width: @tablet) {
     font-size: 20px;
     line-height: 27px;
+  }
+}
+
+.selection-form__text {
+  width: auto;
+  height: 45px;
+  padding-left: 15px;
+  flex-grow: 1;
+  position: relative;
+
+  border: 1px solid @input-border;
+
+  &:hover {
+    border-color: @very-light-grey;
+  }
+
+  &:focus {
+    border-width: 2px;
+    border-color: @input-border-focus;
+  }
+
+  &--email,
+  &--tel {
+    flex-grow: 1;
+    margin-left: 12px;
+
+    @media (min-width: @tablet) {
+      margin-left: 18px;
+    }
   }
 }
 
@@ -118,12 +194,13 @@
 
 .selection-form__wrap {
   padding: 0 20px 0 20px;
+  display: grid;
+  row-gap: 12px;
 
   @media (min-width: @tablet) {
     padding: 0;
 
     &--extra {
-      display: grid;
       grid-template-columns: 1fr 1fr;
       row-gap: 32px;
       column-gap: 123px;
@@ -133,7 +210,6 @@
 
   @media (min-width: @desktop) {
     &--desktop {
-      display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 80px;
     }
@@ -146,7 +222,140 @@
 }
 
 .selection-form__item {
-  margin-bottom: 12px;
+  &--text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: @tablet) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &--text .selection-form__label {
+    margin-right: 12px;
+
+    @media (min-width: @tablet) {
+      margin-right: 18px;
+    }
+  }
+
+  &--text .selection-form__label--email,
+  &--text .selection-form__label--tel {
+    margin-right: 0;
+  }
+
+  &--radio {
+    height: 30px;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: @tablet) {
+      height: 40px;
+    }
+  }
+
+  &--radio .selection-form__label {
+    min-height: 30px;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 45px;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: @tablet) {
+      padding-left: 60px;
+      min-height: 40px;
+    }
+  }
+
+  &--radio .selection-form__label::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @very-light-grey;
+    border-radius: 50%;
+    left: 0;
+
+    @media (min-width: @tablet) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &--checkbox {
+    height: 30px;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: @tablet) {
+      height: 40px;
+    }
+  }
+
+  &--checkbox .selection-form__label {
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 46px;
+    cursor: pointer;
+    user-select: none;
+
+    @media (min-width: @tablet) {
+      min-height: 40px;
+      padding-left: 59px;
+    }
+  }
+
+  &--checkbox .selection-form__label::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @very-light-grey;
+    left: 0;
+
+    @media (min-width: @tablet) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.selection-form__checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-image: url("/img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: 2px;
+
+  @media (min-width: @tablet) {
+    left: 7px;
+  }
+}
+
+.selection-form__radio:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 13.5px;
+  height: 13.5px;
+  background-color: @basic-green;
+  border-radius: 50%;
+  left: 8.25px;
+
+  @media (min-width: @tablet) {
+    width: 18px;
+    height: 18px;
+    left: 11.5px;
+  }
 }
 
 .selection-form__button {

@@ -4,7 +4,9 @@
   box-sizing: border-box;
 }
 
-::placeholder {
+::placeholder,
+.selection-form__text,
+.selection-form__textarea {
   font-weight: 300;
   font-size: 16px;
   line-height: 18px;
@@ -15,4 +17,12 @@
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+input:invalid {
+  border: 2px solid @light-coral;
+}
+
+.disabled {
+  opacity: 0.3;
 }

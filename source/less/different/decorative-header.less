@@ -4,14 +4,43 @@
   color: @black;
   font-family: @oswald;
   font-weight: 300;
-  margin: 0 0 0 0;
-  padding: 0 0 0 20px;
+  margin-top: 0;
+  position: relative;
+  display: inline-flex;
 
   @media (min-width: @tablet) {
-    margin-bottom: 80px;
     font-weight: 300;
     font-size: 36px;
     line-height: 36px;
     padding: 0;
+  }
+}
+
+.decorative-header::before,
+.decorative-header::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 2px;
+  top: 22px;
+  // background-color: green;
+}
+
+.decorative-header::before {
+  @media (min-width: @tablet) {
+    background-color: @basic-green;
+    left: -20px;
+    transform: translateX(-100%);
+  }
+}
+
+.decorative-header::after {
+  top: 15px;
+  transform: translateX(100%);
+  background-color: @basic-green;
+  right: -20px;
+
+  @media (min-width: @tablet) {
+    top: 22px;
   }
 }

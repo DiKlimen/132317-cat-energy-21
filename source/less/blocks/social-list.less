@@ -1,5 +1,7 @@
 .social-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: min-content min-content min-content;
+  column-gap: 35px;
   justify-content: center;
   margin: 0;
   padding: 20px 0 20px 0;
@@ -10,12 +12,21 @@
   border-bottom: 1px solid @border-gray;
 
   @media (min-width: @tablet) {
-    display: grid;
 
-    column-gap: 10px;
+    column-gap: 28px;
 
     border: none;
 
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.social-list__link {
+  &:active {
+    opacity: 0.2;
+  }
+
+  &:hover path {
+    fill: @basic-green;
   }
 }

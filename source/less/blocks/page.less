@@ -27,12 +27,19 @@
   }
 }
 
+.page__big-header-wrap {
+  @media (min-width: @desktop) {
+    background: linear-gradient(to right, @white 0%, @white 50%, @header-background 50%, @header-background 100%);
+    margin-bottom: 82px;
+  }
+}
+
 .page__header-wrap {
   @media (min-width: @desktop) {
-    margin-bottom: 82px;
-
     &--index {
-      background-color: @green-background;
+      background-image: url("/img/index-background-desktop 3.jpg");
+      background-repeat: no-repeat;
+      background-position: 100% 0;
     }
   }
 }
