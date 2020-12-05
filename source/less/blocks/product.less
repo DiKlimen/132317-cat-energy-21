@@ -3,17 +3,25 @@
 
   border-top: 1px solid @show-more-border;
 
+  @media (min-width: @tablet) {
+    border: none;
+  }
+
   &:last-child {
     border-bottom: 1px solid @show-more-border;
+
+    @media (min-width: @tablet) {
+      border: 2px solid @show-more-border;
+      background-image: none;
+    }
   }
 
   @media (min-width: @tablet) {
     min-height: 324px;
-    background-color: @basic-grey;
     display: flex;
     flex-direction: column;
     padding: 10px 0 40px 0;
-    border: 1px solid @show-more-border;
+    background-image: linear-gradient(transparent 20%, @basic-grey 20%);
   }
 
   @media (min-width: @desktop) {
