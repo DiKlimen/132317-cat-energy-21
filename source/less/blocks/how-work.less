@@ -30,6 +30,7 @@
   padding: 0;
 
   row-gap: 20px;
+  counter-reset: how-work;
 
   @media (min-width: @tablet) {
     column-gap: 150px;
@@ -50,10 +51,25 @@
 
 .how-work__item {
   display: flex;
+  position: relative;
 
   @media (min-width: @tablet) {
     flex-direction: column;
     min-height: 280px;
+    padding-top: 37px;
+
+    &::before {
+      position: absolute;
+      counter-increment: how-work;
+      content: counter(how-work);
+      font-weight: 300;
+      font-size: 280px;
+      line-height: 280px;
+      right: 0;
+      top: 0;
+      color: @basic-grey;
+      z-index: -1;
+    }
   }
 
   @media (min-width: @desktop) {
