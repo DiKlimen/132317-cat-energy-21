@@ -13,6 +13,16 @@
 
   background-color: @basic-green;
 
+  &--show-more {
+    color: @special-dark-grey;
+
+    background-color: @basic-grey;
+
+    &:hover {
+      background-color: @basic-grey;
+    }
+  }
+
   &:hover {
     background-color: @basic-green2;
   }
@@ -24,15 +34,10 @@
   @media (min-width: @tablet) {
     font-size: 20px;
     line-height: 26px;
-  }
 
-  &--show-more {
-    color: @special-dark-grey;
-
-    background-color: @basic-grey;
-
-    &:hover {
-      background-color: @basic-grey;
+    &--index {
+      height: 54px;
+      z-index: 1;
     }
   }
 }
