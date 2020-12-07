@@ -35,12 +35,13 @@
 
 .food-programs__item {
   margin: 0;
-  padding: 30px 20px 0 20px;
+  padding: 21px 20px 0 20px;
 
   background-color: @basic-grey;
   display: grid;
   grid-template-areas: "img title" "text text" "link link";
-  grid-template-columns: 35% 1fr;
+  grid-template-columns: 30% 1fr;
+  min-height: 266px;
 
   &:last-child {
     margin-bottom: 0;
@@ -66,6 +67,7 @@
 .food-programs__img {
   height: 53px;
   width: 67px;
+  margin-left: -7px;
   grid-area: img;
 
   @media (min-width: @tablet) {
@@ -80,7 +82,7 @@
 }
 
 .food-programs__title {
-  margin: 0 0 29px 0;
+  margin: 9px 0 24px 0;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
@@ -107,6 +109,7 @@
   font-size: 14px;
   line-height: 18px;
   font-family: @arial;
+  align-self: flex-start;
 
   @media (min-width: @tablet) {
     font-size: 16px;
