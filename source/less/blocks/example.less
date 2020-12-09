@@ -6,9 +6,9 @@
   background-color: @example-background;
 
   @media (min-width: @tablet) {
-    padding: 43px 30px 67px 30px;
+    padding: 43px 30px 69px 30px;
     background-color: transparent;
-    background-image: linear-gradient(transparent 50%, @example-background 50%);
+    background-image: linear-gradient(transparent 57%, @example-background 57%);
   }
 
   @media (min-width: @desktop) {
@@ -39,6 +39,7 @@
     font-weight: 400;
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 63px;
   }
 
   @media (min-width: @desktop) {
@@ -58,6 +59,8 @@
   @media (min-width: @tablet) {
     font-size: 16px;
     line-height: 24px;
+    margin-right: 7px;
+    margin-bottom: 37px;
   }
 
   @media (min-width: @desktop) {
@@ -71,7 +74,7 @@
   margin-bottom: 20px;
 
   @media (min-width: @tablet) {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: @desktop) {
@@ -94,6 +97,11 @@
 .example__picture {
   margin-bottom: 28px;
   transform: translateX(-5px);
+
+  @media (min-width: @tablet) {
+    transform: translateX(-1px);
+    margin-bottom: 0;
+  }
 }
 
 .example__img {
@@ -113,4 +121,5 @@
 
 .example__switch {
   align-self: center;
+  margin-top: -76px;
 }

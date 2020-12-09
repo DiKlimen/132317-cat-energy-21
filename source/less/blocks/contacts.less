@@ -16,7 +16,7 @@
 
   @media (min-width: @tablet) {
     justify-content: space-between;
-    padding: 65px 70px 61px 70px;
+    padding: 65px 74px 57px 70px;
   }
 
   @media (min-width: @desktop) {
@@ -39,7 +39,7 @@
 
   @media (min-width: @tablet) {
     width: 22%;
-    margin: 0;
+    margin: 4px 0 0 0;
 
     font-weight: 400;
     font-size: 20px;
@@ -56,6 +56,13 @@
   font-size: 14px;
   line-height: 20px;
   font-family: @arial;
+
+  & span {
+    @media (min-width: @tablet) {
+      display: inline-block;
+      margin-top: 20px;
+    }
+  }
 
   @media (min-width: @tablet) {
     width: 25%;
@@ -79,7 +86,7 @@
   object-fit: cover;
   width: 100%;
 
-  @media (min-width: @desktop) {
+  @media (min-width: @tablet) {
     height: 400px;
   }
 }
