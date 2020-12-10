@@ -50,7 +50,7 @@
 }
 
 .example__description {
-  margin: 0 5px 26px 0;
+  margin: 0 5px 24px 0;
 
   font-size: 14px;
   line-height: 18px;
@@ -120,6 +120,8 @@
 }
 
 .example__switch {
-  align-self: center;
-  margin-top: -76px;
+  @media (min-width: @tablet) {
+    align-self: center;
+    margin-top: -76px;
+  }
 }

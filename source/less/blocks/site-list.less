@@ -16,6 +16,12 @@
     font-size: 18px;
     line-height: 24px;
   }
+
+  @media (min-width: @desktop) {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .site-list__item {
@@ -76,6 +82,10 @@
       height: 2px;
       width: 100%;
       top: 32px;
+
+      @media (min-width: @desktop) {
+        top: 36px;
+      }
     }
   }
 

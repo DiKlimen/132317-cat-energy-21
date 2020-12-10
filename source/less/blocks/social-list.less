@@ -13,12 +13,23 @@
   border-bottom: 1px solid @border-gray;
 
   @media (min-width: @tablet) {
-
-    column-gap: 28px;
-
+    display: flex;
+    justify-content: start;
     border: none;
+    column-gap: 0;
+  }
+}
 
-    grid-template-columns: 1fr 1fr 1fr;
+.social-list__item {
+  @media (min-width: @tablet) {
+    &--vkontakte {
+      margin-right: 27px;
+    }
+
+    &--instagram {
+      margin-right: 21px;
+      margin-top: 1px;
+    }
   }
 }
 
@@ -29,5 +40,24 @@
 
   &:hover path {
     fill: @basic-green;
+  }
+}
+
+.social-list__img {
+  @media (min-width: @tablet) {
+    &--vkontakte {
+      width: 30px;
+      height: 22px;
+    }
+
+    &--instagram {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--facebook {
+      width: 28px;
+      height: 33px;
+    }
   }
 }
