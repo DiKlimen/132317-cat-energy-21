@@ -14,6 +14,7 @@
   @media (min-width: @desktop) {
     padding-right: 0;
     padding-left: 0;
+    padding-top: 22px;
     background-image: linear-gradient(transparent 25%, @example-background 25%);
   }
 }
@@ -21,7 +22,8 @@
 .example__wrap {
   @media (min-width: @desktop) {
     display: grid;
-    grid-template-columns: 436px auto;
+    align-items: flex-start;
+    grid-template-columns: 438px auto;
     grid-template-areas: "title img-switch" "description img-switch" "stats img-switch";
     padding-left: 0;
     padding-right: 0;
