@@ -48,7 +48,7 @@
   }
 
   @media (min-width: @tablet) {
-    padding: 68px 35px 58px 52px;
+    padding: 68px 35px 44px 52px;
     grid-template-columns: 62% 1fr;
     grid-template-areas: "title img" "text img" "link img";
     min-height: 372px;
@@ -177,5 +177,10 @@
     line-height: 27px;
 
     border: none;
+    transform: translateY(-14px);
+  }
+
+  @media (min-width: @desktop) {
+    transform: translateY(3px);
   }
 }
