@@ -174,24 +174,27 @@
 
     <section class="example">
       <div class="example__wrap container">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <div class="example__stats-list stats-list">
-          <dl class="stats-list__wrap-decor">
-            <div class="stats-list-item stats-list-item--decor">
-              <dt class="stats-list__number">5 кг</dt>
-              <dd class="stats-list__description stats-list__description--decor">Снижение веса</dd>
-            </div>
-            <div class="stats-list-item stats-list-item--decor">
-              <dt class="stats-list__number">60 дней</dt>
-              <dd class="stats-list__description stats-list__description--decor">Затрачено времени</dd>
-            </div>
-          </dl>
-          <dl class="stats-list-item stats-list-item--cost">
-            <dt class="stats-list__number stats-list__number--cost">15 000 Руб.</dt>
-            <dd class="stats-list__description stats-list__description--cost">Затраты на питание:</dd>
-          </dl>
+        <div class="example__wrap-description">
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="example__stats-list stats-list">
+            <dl class="stats-list__wrap-decor">
+              <div class="stats-list-item stats-list-item--decor">
+                <dt class="stats-list__number">5 кг</dt>
+                <dd class="stats-list__description stats-list__description--decor">Снижение веса</dd>
+              </div>
+              <div class="stats-list-item stats-list-item--decor">
+                <dt class="stats-list__number">60 дней</dt>
+                <dd class="stats-list__description stats-list__description--decor">Затрачено времени</dd>
+              </div>
+            </dl>
+            <dl class="stats-list-item stats-list-item--cost">
+              <dt class="stats-list__number stats-list__number--cost">15 000 Руб.</dt>
+              <dd class="stats-list__description stats-list__description--cost">Затраты на питание:</dd>
+            </dl>
+          </div>
         </div>
+
         <div class="example__wrap-toggle">
           <picture class="example__picture">
             <source media="(min-width: 1440px)" srcset="/img/image_cat_desktop.png 1x, img/image_cat_desktop@2x.png 2x">
@@ -199,13 +202,10 @@
             <img class="example__img" src="/img/before-mobile.png" srcset="/img/before-mobile@2x.png 2x" width="311" height="232" alt="Живой пример кота">
           </picture>
           <div class="example__switch switch">
-              <button type="button" class="switch__button switch__button--before">Было</button>
-
-              <div class="switch__simple switch__simple--after"></div>
-
-              <input class="switch__scale" type="range" aria-label="Переключатель котов">
-              <button type="button" class="switch__button switch__button--after">Стало</button>
-            </div>
+            <button type="button" class="switch__button switch__button--before">Было</button>
+            <div class="switch__simple switch__simple--after"></div>
+            <input class="switch__scale" type="range" aria-label="Переключатель котов">
+            <button type="button" class="switch__button switch__button--after">Стало</button>
           </div>
         </div>
       </div>
