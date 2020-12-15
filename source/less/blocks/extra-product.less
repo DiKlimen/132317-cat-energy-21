@@ -16,9 +16,13 @@
 }
 
 .extra-product__item {
-  padding: 13px 0 19px 0;
+  padding: 12px 0 18px 0;
 
   border-top: 1px solid @very-light-grey;
+
+  &:last-child {
+    border-bottom: 1px solid @very-light-grey;
+  }
 
   @media (min-width: @tablet) {
     &:first-child {
