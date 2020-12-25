@@ -22,6 +22,10 @@
 
   &:last-child {
     border-bottom: 1px solid @very-light-grey;
+
+    @media (min-width: @desktop) {
+      border-bottom: none;
+    }
   }
 
   @media (min-width: @tablet) {
@@ -55,6 +59,11 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 21px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 0;
+    margin-right: auto;
   }
 }
 

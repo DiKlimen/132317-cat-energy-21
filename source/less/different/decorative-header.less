@@ -24,7 +24,6 @@
   width: 100vw;
   height: 2px;
   top: 22px;
-  // background-color: green;
 }
 
 .decorative-header::before {
@@ -32,6 +31,10 @@
     background-color: @basic-green;
     left: 0;
     transform: translateX(-100%);
+  }
+
+  @media (min-width: @desktop) {
+    left: -33px;
   }
 }
 
@@ -43,5 +46,9 @@
 
   @media (min-width: @tablet) {
     top: 22px;
+  }
+
+  @media (min-width: @desktop) {
+    right: -38px;
   }
 }
