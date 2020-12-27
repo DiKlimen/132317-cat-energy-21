@@ -146,35 +146,22 @@
     width: 100%;
     margin-right: 0;
     align-items: center;
-  }
+    position: relative;
 
-  &--email::after {
-    position: absolute;
-    content: "";
-    width: 19px;
-    height: 14px;
-    background-image: url("../img/input-icon/icon_email.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    right: 14px;
+    & svg {
+      position: absolute;
+      right: 14px;
+      z-index: 1;
 
-    @media (min-width: @tablet) {
-      right: 19px;
+      @media (min-width: @tablet) {
+        right: 19px;
+      }
     }
-  }
 
-  &--tel::after {
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background-image: url("../img/input-icon/phone.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    right: 12px;
-
-    @media (min-width: @tablet) {
-      right: 15px;
+    &:active svg,
+    &:active path,
+    &:active line {
+      stroke: @basic-green;
     }
   }
 

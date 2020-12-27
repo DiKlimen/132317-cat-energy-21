@@ -6,14 +6,16 @@
 
   text-decoration: none;
 
-  pointer-events: none;
-
   &:hover path {
     fill: @basic-green;
   }
 
   &:active {
     opacity: 0.5;
+  }
+
+  @media (min-width: @tablet) {
+    padding: 0;
   }
 }
 
