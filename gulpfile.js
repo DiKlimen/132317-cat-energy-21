@@ -35,24 +35,15 @@ const styles = () => {
 
 exports.styles = styles;
 
-// HTML (Сейчас просто перемещает файлы)
+// HTML
 
 const html = () => {
   return gulp.src("source/*.html")
+    .pipe(posthtml([include()]))
     .pipe(gulp.dest("build"));
 }
 
 exports.html = html;
-
-// Include
-
-const include = () => {
-  return gulp.src("source/*.html")
-  .pipe(posthtml([include()]))
-  .pipe(gulp.dest("build"));
-}
-
-exports.include = include;
 
 // Scripts
 
@@ -138,6 +129,9 @@ const server = (done) => {
     ui: false,
   });
   done();
+  gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/js/*.js", gulp.series(scripts));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
 exports.server = server;
@@ -149,45 +143,21 @@ const reload = done => {
   done();
 }
 
-// Watcher
-
-const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/js/*.js", gulp.series(scripts));
-  gulp.watch("source/*.html", gulp.series(html, reload));
-}
-
 // Build
 
 const build = gulp.series(
   clean,
-  gulp.parallel(
-    styles,
-    html,
-    include,
-    scripts,
-    sprite,
-    copy,
-    images,
-    createWebp
-  )
-)
+  styles,
+  scripts,
+  sprite,
+  copy,
+  createWebp,
+  html
+);
 
 exports.build = build;
 
 exports.default = gulp.series(
-  clean,
-  gulp.parallel(
-    styles,
-    html,
-    include,
-    scripts,
-    sprite,
-    copy,
-    createWebp
-  ),
-  gulp.series(
-    server,
-    watcher
-  )
+  build,
+  server
 );
