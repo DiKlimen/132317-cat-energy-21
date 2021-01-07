@@ -160,16 +160,19 @@
     content: "";
     width: 32px;
     height: 11px;
-    background-image: url("/img/icon_arrow.svg");
+    background-image: url("/img/svg/icon_arrow.svg");
     transform: translateX(70%);
     top: 17px;
 
     @media (min-width: @tablet) {
-      top: 17px;
+      top: auto;
+      left: 110px;
     }
   }
 
   @media (min-width: @tablet) {
+    display: flex;
+    align-items: center;
     padding: 0;
     margin-top: 14px;
 

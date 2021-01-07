@@ -201,6 +201,8 @@
 
   @media (min-width: @tablet) {
     height: 52px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -295,6 +297,12 @@
   &--text .selection-form__label--email,
   &--text .selection-form__label--tel {
     margin-right: 0;
+
+    svg {
+      fill: green;
+
+      stroke: @special-dark-grey-2;
+    }
   }
 
   &--radio {
@@ -380,7 +388,7 @@
   position: absolute;
   width: 26px;
   height: 26px;
-  background-image: url("/img/tick.svg");
+  background-image: url("/img/svg/tick.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   left: 2px;

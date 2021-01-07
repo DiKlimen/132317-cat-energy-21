@@ -84,10 +84,10 @@ exports.createWebp = createWebp;
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/logo/*.svg") // Путь для примера
+  return gulp.src("source/img/sprite/*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite_auto.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img/sprite"));
 }
 
 exports.sprite = sprite;
