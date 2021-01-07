@@ -14,7 +14,7 @@ const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
 const posthtml = require("gulp-posthtml");
-const include = require("posthtml-include")
+const include = require("posthtml-include");
 
 // Styles
 
@@ -84,7 +84,7 @@ exports.createWebp = createWebp;
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/logo/*.svg") // Путь для примера
+  return gulp.src("source/img/logo/*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite_auto.svg"))
     .pipe(gulp.dest("build/img"));
