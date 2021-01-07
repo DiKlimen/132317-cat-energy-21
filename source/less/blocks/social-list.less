@@ -39,16 +39,37 @@
 }
 
 .social-list__link {
+  svg {
+    fill: @icon-fill;
+  }
+
   &:active {
     opacity: 0.2;
   }
 
-  &:hover path {
-    fill: @basic-green;
+  &:hover {
+    svg {
+      fill: @basic-green;
+    }
   }
 }
 
 .social-list__img {
+  &--vkontakte {
+    width: 23px;
+    height: 16px;
+  }
+
+  &--instagram {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--facebook {
+    width: 22px;
+    height: 22px;
+  }
+
   @media (min-width: @tablet) {
     &--vkontakte {
       width: 30px;
@@ -61,8 +82,8 @@
     }
 
     &--facebook {
-      width: 28px;
-      height: 33px;
+      width: 18px;
+      height: 30px;
     }
   }
 }
