@@ -157,12 +157,6 @@
         right: 19px;
       }
     }
-
-    &:active svg,
-    &:active path,
-    &:active line {
-      stroke: @basic-green;
-    }
   }
 
   @media (min-width: @tablet) {
@@ -297,12 +291,6 @@
   &--text .selection-form__label--email,
   &--text .selection-form__label--tel {
     margin-right: 0;
-
-    svg {
-      fill: green;
-
-      stroke: @special-dark-grey-2;
-    }
   }
 
   &--radio {
@@ -382,6 +370,18 @@
     }
   }
 }
+
+.selection-form__label--email svg,
+.selection-form__label--tel svg {
+  width: 20px;
+  height: 20px;
+}
+
+.selection-form__label:focus svg {
+  stroke: @basic-green;
+}
+
+
 
 .selection-form__checkbox:checked + label::after {
   content: "";
