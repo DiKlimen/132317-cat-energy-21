@@ -20,12 +20,15 @@
   }
 }
 
-.input[aria-invalid="true"] {
-  border: 2px solid @light-coral;
-}
+.selection-form__text:invalid:focus {
+  box-shadow: 0 0 0 2px @light-coral;
+  border: none;
+  outline: none;
 
-.disabled {
-  opacity: 0.3;
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 2px @light-coral;
+  }
 }
 
 .display-none {

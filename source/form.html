@@ -10,7 +10,7 @@
 
   <header class="page-header container">
     <div class="page-header__wrap">
-      <a class="page-header__link-logo" href="#">
+      <a class="page-header__link-logo" href="index.html">
         <picture class="page-header__picture">
           <source media="(min-width: 1440px)" srcset="img/svg/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg">
@@ -18,9 +18,10 @@
         </picture>
         <img class="page-header__logo-text" src="img/svg/logo-text-header.svg" width="101" height="18" alt="Название сайта Cat Energy">
       </a>
-      <button class="main-nav-toggle" type="button">
+      <button class="main-nav-toggle hidden" type="button" aria-label="Открыть/закрыть меню">
         <span class="main-nav-toggle__line"></span>
-        <span class="visually-hidden">Открыть меню</span>
+        <span class="main-nav-toggle__line"></span>
+        <span class="main-nav-toggle__line"></span>
       </button>
     </div>
     <nav class="main-nav">
@@ -110,7 +111,7 @@
         <div class="selection-form__area selection-form__area--comment">
           <h2 class="selection-form__legend selection-form__legend--comment decorative-header">Комментарий</h2>
           <div class="selection-form__wrap selection-form__wrap--comment">
-            <textarea class="selection-form__textarea" name="comment-text" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="selection-form__textarea" name="comment-text" aria-label="Расскажите обо всех повадках кота" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </div>
 
@@ -142,19 +143,27 @@
       </form>
     </section>
 
-    <section class="contacts">
-      <div class="container">
-        <h2 class="visually-hidden">Адрес компании Cat Energy</h2>
-        <div class="contacts__wrap-text">
-          <p class="contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
-        </div>
+    <section class="contacts container">
+      <h2 class="visually-hidden">Адрес компании Cat Energy</h2>
+      <div class="contacts__wrap-text">
+        <p class="contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров</p>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
       </div>
-      <picture class="contacts__picture">
-        <source media="(min-width: 1440px)" srcset="/img/location-desktop.jpg 1x, /img/location-desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)" srcset="/img/location-tablet.jpg 1x, /img/location-tablet@2x.jpg 2x">
-        <img class="contacts__map" src="img/location-mobile.jpg" srcset="img/location-mobile@2x.jpg" width="320" height="362" alt="Картинка заглушка">
-      </picture>
+
+      <div id="map" class="contacts__map">
+        <picture class="contacts__picture">
+          <source media="(min-width: 1440px)" srcset="/img/location-desktop.jpg 1x, /img/location-desktop@2x.jpg 2x" />
+          <source media="(min-width: 768px)" srcset="/img/location-tablet.jpg 1x, /img/location-tablet@2x.jpg 2x" />
+          <img
+            class="contacts__map"
+            src="img/location-mobile.jpg"
+            srcset="img/location-mobile@2x.jpg"
+            width="320"
+            height="362"
+            alt="Картинка заглушка"
+          />
+        </picture>
+      </div>
     </section>
   </main>
 
@@ -198,12 +207,12 @@
     </div>
   </footer>
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=e58e65a3-0ff8-4076-83e1-efab10997075&lang=ru_RU" type="text/javascript">
-  </script>
-
   <div class="display-none">
     <include src="build/img/sprite/sprite_auto.svg"></include>
   </div>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e58e65a3-0ff8-4076-83e1-efab10997075&lang=ru_RU"></script>
+  <script src="js/scripts.js"></script>
 
 </body>
 </html>
