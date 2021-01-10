@@ -34,13 +34,10 @@
 }
 
 .food-programs__item {
+  position: relative;
   margin: 0;
   padding: 21px 20px 0 20px;
-
   background-color: @basic-grey;
-  display: grid;
-  grid-template-areas: "img title" "text text" "link link";
-  grid-template-columns: 30% 1fr;
   min-height: 266px;
 
   &:last-child {
@@ -48,19 +45,29 @@
   }
 
   @media (min-width: @tablet) {
-    padding: 68px 35px 44px 52px;
-    grid-template-columns: 62% 1fr;
-    grid-template-areas: "title img" "text img" "link img";
+    padding: 68px 200px 44px 52px;
     min-height: 372px;
   }
 
   @media (min-width: @desktop) {
-    grid-template-columns: 163px 1fr;
-    grid-template-areas: "img title" "text text" "link link";
     padding: 41px 52px 51px 52px;
 
     &:first-child {
       margin-bottom: 0;
+    }
+  }
+
+  & > svg {
+    position: absolute;
+
+    @media (min-width: @tablet) {
+      right: 0;
+      top: 0;
+    }
+
+    @media (min-width: @desktop) {
+      left: 0;
+      right: 0;
     }
   }
 }
@@ -74,13 +81,11 @@
   @media (min-width: @tablet) {
     height: 211px;
     width: 268px;
-    transform: translateX(-19px) translateY(16px);
   }
 
   @media (min-width: @desktop) {
     width: 134px;
     height: 106px;
-    transform: translateX(-11px) translateY(3px);
   }
 }
 
@@ -90,30 +95,32 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  padding-left: 71px;
 
   @media (min-width: @tablet) {
     font-weight: 300;
     font-size: 36px;
     line-height: 36px;
-    padding: 0;
-    grid-area: title;
+    padding-left: 0;
     margin-bottom: 25px;
   }
 
   @media (min-width: @desktop) {
     margin-top: 36px;
     margin-bottom: 0;
+    padding-left: 100px;
   }
 }
 
 .food-programs__text {
 
-  margin: 0 13px 23px 0;
+  margin: 0 13px 0 0;
   grid-area: text;
   font-size: 14px;
   line-height: 18px;
   font-family: @arial;
-  align-self: flex-start;
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 23px;
 
   & br {
     display: none;
@@ -123,6 +130,7 @@
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 53px;
+    border: 0;
 
     & br {
       display: inline;
@@ -141,10 +149,12 @@
 }
 
 .food-programs__link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   padding: 15px 0 15px 0;
   position: relative;
   grid-area: link;
+  width: 200px;
 
 
   font-size: 16px;
@@ -154,21 +164,6 @@
   text-decoration: none;
 
   border-top: 1px solid @border-gray;
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 32px;
-    height: 11px;
-    background-image: url("/img/svg/icon_arrow.svg");
-    transform: translateX(70%);
-    top: 17px;
-
-    @media (min-width: @tablet) {
-      top: auto;
-      left: 110px;
-    }
-  }
 
   @media (min-width: @tablet) {
     display: flex;
@@ -185,5 +180,27 @@
 
   @media (min-width: @desktop) {
     transform: translateY(3px);
+  }
+
+  &:hover {
+    .food-programs__arrow {
+      svg {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.food-programs__info {
+  margin-right: 20px;
+}
+
+.food-programs__arrow {
+  display: flex;
+  overflow: hidden;
+
+  svg {
+    transform: translateX(-10px);
+    transition: all 0.3s;
   }
 }
