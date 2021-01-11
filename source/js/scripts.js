@@ -1,18 +1,56 @@
-ymaps.ready(init);
-function init(){
-    var myMap = new ymaps.Map("map", {
-        center: [59.938635, 30.323118],
-        zoom: 17
+const mapBlock = document.querySelector('#map');
+const breakpointMd = window.matchMedia('(min-width:768px)');
+const breakpointLg = window.matchMedia('(min-width:1440px)');
+
+const mapState = {
+  latitude: 59.938635,
+  longitude: 30.323118,
+  iconWidth: 56,
+  iconHeight: 52
+};
+
+if (breakpointMd.matches) {
+  mapState.iconWidth = 113;
+  mapState.iconHeight = 106;
+}
+
+if (breakpointLg.matches) {
+  mapState.longitude =  30.321;
+}
+
+if (map) {
+  ymaps.ready(init);
+  function init() {
+    const myMap = new ymaps.Map(map, {
+      center: [mapState.latitude, mapState.longitude],
+      zoom: 17,
     });
+    const myPlacemark = new ymaps.Placemark(
+      [59.938635, 30.323118],
+      {
+        hintContent: 'ул. Большая Конюшенная, д. 19/8',
+      },
+      {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/pin.png',
+        iconImageSize: [mapState.iconWidth, mapState.iconHeight],
+        iconImageOffset: [-mapState.iconWidth / 2, -mapState.iconHeight / 2],
+      },
+    );
+
+    myMap.geoObjects.add(myPlacemark);
+  }
 }
 
 const toggleBtn = document.querySelector('.main-nav-toggle');
 const nav = document.querySelector('.main-nav');
 
-toggleBtn.classList.remove('hidden');
-nav.classList.remove('active');
+if (toggleBtn && nav) {
+  toggleBtn.classList.remove('hidden');
+  nav.classList.remove('active');
 
-toggleBtn.addEventListener('click', () => {
-  nav.classList.toggle('active');
-  toggleBtn.classList.toggle('active');
-});
+  toggleBtn.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    toggleBtn.classList.toggle('active');
+  });
+}

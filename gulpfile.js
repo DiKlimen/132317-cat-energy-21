@@ -7,7 +7,7 @@ const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin"); //  Минимизатор HTML
-const uglify = require("gulp-uglify-es"); //  Минимизатор JS
+const uglify = require("gulp-uglify-es").default; //  Минимизатор JS
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
@@ -49,6 +49,8 @@ exports.html = html;
 
 const scripts = () => {
   return gulp.src("source/js/*.js")
+    .pipe(rename("scripts.min.js"))
+    .pipe(uglify())
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream()); // обновление файлов для сервера
 }
@@ -84,8 +86,8 @@ exports.createWebp = createWebp;
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/sprite/*.svg")
-    .pipe(svgstore())
+  return gulp.src('source/img/sprite/*.svg')
+    .pipe(svgstore({inlineSvg: true}))
     .pipe(rename("sprite_auto.svg"))
     .pipe(gulp.dest("build/img/sprite"));
 }

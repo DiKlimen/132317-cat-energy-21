@@ -53,11 +53,11 @@
             <div class="selection-form__wrap">
               <div class="selection-form__item selection-form__item--text">
                 <label class="selection-form__label" for="cat-name-id">Имя:<span>*</span></label>
-                <input class="selection-form__text" type="text" name="cat-name" id="cat-name-id" placeholder="Барсик">
+                <input class="selection-form__text" type="text" name="cat-name" id="cat-name-id" placeholder="Барсик" required>
               </div>
               <div class="selection-form__item selection-form__item--text">
                 <label class="selection-form__label" for="cat-weight-id">Вес (кг):<span>*</span></label>
-                <input class="selection-form__text" type="text" name="cat-weight" id="cat-weight-id" placeholder="7">
+                <input class="selection-form__text" type="text" name="cat-weight" id="cat-weight-id" placeholder="7" required>
               </div>
               <div class="selection-form__item selection-form__item--text">
                 <label class="selection-form__label" for="cat-old-id">Возраст (лет):</label>
@@ -91,7 +91,7 @@
           <div class="selection-form__wrap selection-form__wrap--desktop">
             <div class="selection-form__item selection-form__item--text">
               <label class="selection-form__label selection-form__label--email">E-mail:<span>*</span>
-                <input class="selection-form__text selection-form__text--email" type="email" name="email-owner" placeholder="кuklachev@gmail.com">
+                <input class="selection-form__text selection-form__text--email" type="email" name="email-owner" placeholder="кuklachev@gmail.com" required>
                 <svg>
                   <use xlink:href="#icon-email"></use>
                 </svg>
@@ -99,7 +99,7 @@
             </div>
             <div class="selection-form__item selection-form__item--text">
               <label class="selection-form__label selection-form__label--tel">Телефон:<span>*</span>
-                <input class="selection-form__text selection-form__text--tel" type="tel" name="tel-owner" placeholder="8 (960) 900-60-90">
+                <input class="selection-form__text selection-form__text--tel" type="tel" name="tel-owner" placeholder="8 (960) 900-60-90" required>
                 <svg>
                   <use xlink:href="#icon-phone"></use>
                 </svg>
@@ -218,7 +218,7 @@
   </div>
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=e58e65a3-0ff8-4076-83e1-efab10997075&lang=ru_RU"></script>
-  <script src="js/scripts.js"></script>
+  <script src="js/scripts.min.js"></script>
 
 </body>
 </html>
