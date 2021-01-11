@@ -150,6 +150,7 @@
     margin-right: 0;
     align-items: center;
     position: relative;
+    // color: red;
 
     & svg {
       position: absolute;
@@ -195,6 +196,15 @@
   &--tel {
     flex-grow: 1;
     margin-left: 12px;
+
+    & + svg {
+      color: @special-dark-grey-2;
+    }
+
+    &:focus + svg {
+      color: @basic-green;
+    }
+
 
     @media (min-width: @tablet) {
       margin-left: 18px;
