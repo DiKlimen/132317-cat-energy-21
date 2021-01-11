@@ -113,7 +113,7 @@
 }
 
 .selection-form__legend {
-  padding: 0 20px;
+  padding: 0 0 0 20px;
   margin-bottom: 32px;
 
   @media (min-width: @tablet) {
@@ -122,8 +122,11 @@
   }
 
   &--contact {
+    width: 202px;
+
     @media (min-width: @tablet) {
       margin-bottom: 75px;
+      width: auto;
     }
   }
 
@@ -152,6 +155,8 @@
       position: absolute;
       right: 14px;
       z-index: 1;
+      width: 20px;
+      height: 20px;
 
       @media (min-width: @tablet) {
         right: 19px;
@@ -379,17 +384,9 @@
   }
 }
 
-.selection-form__label--email svg,
-.selection-form__label--tel svg {
-  width: 20px;
-  height: 20px;
-}
-
-.selection-form__label:focus svg {
+.selection-form__text:focus + svg {
   stroke: @basic-green;
 }
-
-
 
 .selection-form__checkbox:checked + label::after {
   content: "";
