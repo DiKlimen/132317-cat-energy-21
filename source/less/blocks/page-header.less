@@ -21,8 +21,13 @@
   &--index {
     @media (min-width: @desktop) {
       min-height: 121px;
-      padding: 0;
+      padding: 0 0 22px 0;
       margin-bottom: 93px;
+      align-items: flex-end;
+
+      .page-header__wrap {
+        transform: translateY(17px);
+      }
     }
   }
 }
@@ -40,6 +45,10 @@
     margin-right: 40px;
     transform: translateY(5px);
   }
+
+  // @media (min-width: @desktop) {
+  //   transform: translateY(18px);
+  // }
 }
 
 .page-header__link-logo {

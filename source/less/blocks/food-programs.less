@@ -36,7 +36,7 @@
 .food-programs__item {
   position: relative;
   margin: 0;
-  padding: 21px 20px 0 20px;
+  padding: 30px 20px 0 20px;
   background-color: @basic-grey;
   min-height: 266px;
 
@@ -45,12 +45,12 @@
   }
 
   @media (min-width: @tablet) {
-    padding: 68px 200px 44px 52px;
+    padding: 77px 280px 44px 52px;
     min-height: 372px;
   }
 
   @media (min-width: @desktop) {
-    padding: 41px 52px 51px 52px;
+    padding: 77px 52px 51px 52px;
 
     &:first-child {
       margin-bottom: 0;
@@ -59,15 +59,17 @@
 
   & > svg {
     position: absolute;
+    top: 22px;
+    left: 21;
 
     @media (min-width: @tablet) {
-      right: 0;
-      top: 0;
+      right: 29px;
+      top: 83px;
     }
 
     @media (min-width: @desktop) {
-      left: 0;
-      right: 0;
+      left: 42px;
+      top: 41px;
     }
   }
 }
@@ -90,7 +92,7 @@
 }
 
 .food-programs__title {
-  margin: 9px 0 24px 0;
+  margin: 0 0 29px 0;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
@@ -106,9 +108,8 @@
   }
 
   @media (min-width: @desktop) {
-    margin-top: 36px;
-    margin-bottom: 0;
-    padding-left: 100px;
+    margin-bottom: 73px;
+    padding-left: 162px;
   }
 }
 
@@ -119,7 +120,6 @@
   font-size: 14px;
   line-height: 18px;
   font-family: @arial;
-  border-bottom: 1px solid #d9d9d9;
   padding-bottom: 23px;
 
   & br {
@@ -129,7 +129,9 @@
   @media (min-width: @tablet) {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 53px;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-bottom: 66px;
     border: 0;
 
     & br {
@@ -139,8 +141,7 @@
 
   @media (min-width: @desktop) {
     width: 100%;
-    margin-bottom: 0;
-    margin-top: 30px;
+    margin-bottom: 26px;
 
     & br {
       display: none;
@@ -151,10 +152,8 @@
 .food-programs__link {
   display: flex;
   align-items: center;
-  padding: 15px 0 15px 0;
+  padding: 18px 0 15px 0;
   position: relative;
-  grid-area: link;
-  width: 200px;
 
 
   font-size: 16px;
@@ -169,7 +168,6 @@
     display: flex;
     align-items: center;
     padding: 0;
-    margin-top: 14px;
 
     font-size: 20px;
     line-height: 27px;
@@ -192,7 +190,11 @@
 }
 
 .food-programs__info {
-  margin-right: 20px;
+  margin-right: 18px;
+
+  @media (min-width: @tablet) {
+    margin-right: 25px;
+  }
 }
 
 .food-programs__arrow {
@@ -200,7 +202,7 @@
   overflow: hidden;
 
   svg {
-    transform: translateX(-10px);
+    transform: translateX(-9px);
     transition: all 0.3s;
   }
 }
