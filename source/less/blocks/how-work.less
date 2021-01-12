@@ -82,15 +82,34 @@
   }
 }
 
-.how-work__image {
+.how-work__image__wrap {
+  width: 60px;
+  height: 60px;
+  background-color: @basic-green;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 20px;
 
   @media (min-width: @tablet) {
-    margin-bottom: 31px;
-    margin-right: 0;
     width: 80px;
     height: 80px;
+    margin-bottom: 31px;
+  }
+}
+
+.how-work__image {
+  flex-shrink: 0;
+  width: 32px;
+  height: 33px;
+  // margin-right: 20px;
+
+  @media (min-width: @tablet) {
+    // margin-bottom: 31px;
+    margin-right: 0;
+    width: 32px;
+    height: 33px;
   }
 }
 

@@ -113,17 +113,26 @@
 }
 
 .selection-form__legend {
-  padding: 0 20px;
+  padding: 0 0 0 20px;
   margin-bottom: 32px;
 
   @media (min-width: @tablet) {
-    padding: 0;
+    padding: 0 37px 0 37px;
     margin-bottom: 65px;
+    margin-left: -37px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+    margin-left: 0;
   }
 
   &--contact {
+    width: 202px;
+
     @media (min-width: @tablet) {
       margin-bottom: 75px;
+      width: auto;
     }
   }
 
@@ -147,11 +156,14 @@
     margin-right: 0;
     align-items: center;
     position: relative;
+    // color: red;
 
     & svg {
       position: absolute;
       right: 14px;
       z-index: 1;
+      width: 20px;
+      height: 20px;
 
       @media (min-width: @tablet) {
         right: 19px;
@@ -171,6 +183,9 @@
   padding-left: 15px;
   flex-grow: 1;
   position: relative;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-right: 15px;
 
   border: 1px solid @input-border;
 
@@ -188,6 +203,15 @@
     flex-grow: 1;
     margin-left: 12px;
 
+    & + svg {
+      color: @special-dark-grey-2;
+    }
+
+    &:focus + svg {
+      color: @basic-green;
+    }
+
+
     @media (min-width: @tablet) {
       margin-left: 18px;
     }
@@ -202,6 +226,11 @@
 
 .selection-form__radio {
   margin: 0 15px 0 0;
+}
+
+.selection-form__radio:disabled + label {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .selection-form__textarea {
@@ -371,17 +400,9 @@
   }
 }
 
-.selection-form__label--email svg,
-.selection-form__label--tel svg {
-  width: 20px;
-  height: 20px;
-}
-
-.selection-form__label:focus svg {
+.selection-form__text:focus + svg {
   stroke: @basic-green;
 }
-
-
 
 .selection-form__checkbox:checked + label::after {
   content: "";

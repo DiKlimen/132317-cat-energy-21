@@ -10,7 +10,7 @@
 
   <header class="page-header container">
     <div class="page-header__wrap">
-      <a class="page-header__link-logo" href="#">
+      <a class="page-header__link-logo" href="index.html">
         <picture class="page-header__picture">
           <source media="(min-width: 1440px)" srcset="img/svg/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg">
@@ -18,9 +18,10 @@
         </picture>
         <img class="page-header__logo-text" src="img/svg/logo-text-header.svg" width="101" height="18" alt="Название сайта Cat Energy">
       </a>
-      <button class="main-nav-toggle" type="button">
+      <button class="main-nav-toggle hidden" type="button" aria-label="Открыть/закрыть меню">
         <span class="main-nav-toggle__line"></span>
-        <span class="visually-hidden">Открыть меню</span>
+        <span class="main-nav-toggle__line"></span>
+        <span class="main-nav-toggle__line"></span>
       </button>
     </div>
     <nav class="main-nav">
@@ -56,7 +57,7 @@
               </div>
               <div class="selection-form__item selection-form__item--text">
                 <label class="selection-form__label" for="cat-weight-id">Вес (кг):<span>*</span></label>
-                <input class="selection-form__text" type="text" name="cat-weight" id="cat-weight-id" placeholder="7">
+                <input class="selection-form__text" type="text" name="cat-weight" id="cat-weight-id" placeholder="7" required>
               </div>
               <div class="selection-form__item selection-form__item--text">
                 <label class="selection-form__label" for="cat-old-id">Возраст (лет):</label>
@@ -76,9 +77,9 @@
                 <input class="selection-form__radio visually-hidden" type="radio" name="choice-program" id="mas-program-id" value="mass">
                 <label class="selection-form__label" for="mas-program-id">Набор массы</label>
               </div>
-              <div class="selection-form__item selection-form__item--radio disabled">
-                <input class="selection-form__radio visually-hidden" type="radio" name="choice-program" id="question-program-id" value="question" disabled>
-                <label class="selection-form__label" for="question-program-id">Не знаю (нужет ваш совет)</label>
+              <div class="selection-form__item selection-form__item--radio">
+                <input class="selection-form__radio visually-hidden" type="radio" name="choice-program" id="question-program-id" value="question">
+                <label class="selection-form__label" for="question-program-id">Не знаю (нужен ваш совет)</label>
               </div>
             </div>
           </div>
@@ -90,7 +91,7 @@
           <div class="selection-form__wrap selection-form__wrap--desktop">
             <div class="selection-form__item selection-form__item--text">
               <label class="selection-form__label selection-form__label--email">E-mail:<span>*</span>
-                <input class="selection-form__text selection-form__text--email" type="email" name="email-owner" placeholder="кuklachev@gmail.com">
+                <input class="selection-form__text selection-form__text--email" type="email" name="email-owner" placeholder="кuklachev@gmail.com" required>
                 <svg>
                   <use xlink:href="#icon-email"></use>
                 </svg>
@@ -98,7 +99,7 @@
             </div>
             <div class="selection-form__item selection-form__item--text">
               <label class="selection-form__label selection-form__label--tel">Телефон:<span>*</span>
-                <input class="selection-form__text selection-form__text--tel" type="tel" name="tel-owner" placeholder="8 (960) 900-60-90">
+                <input class="selection-form__text selection-form__text--tel" type="tel" name="tel-owner" placeholder="8 (960) 900-60-90" required>
                 <svg>
                   <use xlink:href="#icon-phone"></use>
                 </svg>
@@ -110,7 +111,7 @@
         <div class="selection-form__area selection-form__area--comment">
           <h2 class="selection-form__legend selection-form__legend--comment decorative-header">Комментарий</h2>
           <div class="selection-form__wrap selection-form__wrap--comment">
-            <textarea class="selection-form__textarea" name="comment-text" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="selection-form__textarea" name="comment-text" aria-label="Расскажите обо всех повадках кота" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </div>
 
@@ -130,7 +131,7 @@
               <label class="selection-form__label" for="milk-id">Молоко</label>
             </div>
             <div class="selection-form__item selection-form__item--checkbox disabled">
-              <input class="selection-form__checkbox visually-hidden" type="checkbox" name="extra-product" value="vitamins" id="vitamins-id" disabled>
+              <input class="selection-form__checkbox visually-hidden" type="checkbox" name="extra-product" value="vitamins" id="vitamins-id">
               <label class="selection-form__label" for="vitamins-id">Витамины</label>
             </div>
           </div>
@@ -142,32 +143,46 @@
       </form>
     </section>
 
-    <section class="contacts">
-      <div class="container">
-        <h2 class="visually-hidden">Адрес компании Cat Energy</h2>
-        <div class="contacts__wrap-text">
-          <p class="contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
-        </div>
+    <section class="contacts container">
+      <h2 class="visually-hidden">Адрес компании Cat Energy</h2>
+      <div class="contacts__wrap-text">
+        <p class="contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров</p>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
       </div>
-      <picture class="contacts__picture">
-        <source media="(min-width: 1440px)" srcset="/img/location-desktop.jpg 1x, /img/location-desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)" srcset="/img/location-tablet.jpg 1x, /img/location-tablet@2x.jpg 2x">
-        <img class="contacts__map" src="img/location-mobile.jpg" srcset="img/location-mobile@2x.jpg" width="320" height="362" alt="Картинка заглушка">
-      </picture>
+
+      <div id="map" class="contacts__map">
+        <picture class="contacts__picture">
+          <source media="(min-width: 1440px)" srcset="/img/location-desktop.jpg 1x, /img/location-desktop@2x.jpg 2x" />
+          <source media="(min-width: 768px)" srcset="/img/location-tablet.jpg 1x, /img/location-tablet@2x.jpg 2x" />
+          <img
+            class="contacts__map"
+            src="img/location-mobile.jpg"
+            srcset="img/location-mobile@2x.jpg"
+            width="320"
+            height="362"
+            alt="Картинка заглушка"
+          />
+        </picture>
+      </div>
     </section>
   </main>
 
   <footer class="main-footer">
     <div class="main-footer-wrap container">
       <a class="main-footer__logo">
-        <img class="logo-footer" src="img/svg/logo-text-footer.svg" width="128" height="24" alt="Логотип сайта Cat Energy">
+        <img
+          class="logo-footer"
+          src="img/svg/logo-text-footer.svg"
+          width="128"
+          height="24"
+          alt="Логотип сайта Cat Energy"
+        />
       </a>
       <ul class="main-footer__social social-list">
         <li class="social-list__item social-list__item--vkontakte">
           <a class="social-list__link" href="#">
             <span class="visually-hidden">Вконтакте</span>
-            <svg class="social-list__img--vkontakte">
+            <svg class="social-list__img social-list__img--vkontakte">
               <use xlink:href="#icon-vk"></use>
             </svg>
           </a>
@@ -175,7 +190,7 @@
         <li class="social-list__item social-list__item--instagram">
           <a class="social-list__link" href="#">
             <span class="visually-hidden">Инстаграм</span>
-            <svg class="social-list__img--instagram">
+            <svg class="social-list__img social-list__img--instagram">
               <use xlink:href="#icon-instagrm"></use>
             </svg>
           </a>
@@ -183,27 +198,27 @@
         <li class="social-list__item social-list__item--facebook">
           <a class="social-list__link social-list__link--facebook" href="#">
             <span class="visually-hidden">Фейсбук</span>
-            <svg class="social-list__img--facebook">
+            <svg class="social-list__img social-list__img--facebook">
               <use xlink:href="#icon-facebook"></use>
             </svg>
           </a>
         </li>
       </ul>
-      <a class="copyright__link" href="#">
-        <span class="copyright__text">HTML Academy</span>
-        <svg class="copyright__img">
+      <a class="copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright-link__text">HTML Academy</span>
+        <svg class="copyright-link__img">
           <use xlink:href="#htmlacademy"></use>
         </svg>
       </a>
     </div>
   </footer>
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=e58e65a3-0ff8-4076-83e1-efab10997075&lang=ru_RU" type="text/javascript">
-  </script>
-
   <div class="display-none">
     <include src="build/img/sprite/sprite_auto.svg"></include>
   </div>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e58e65a3-0ff8-4076-83e1-efab10997075&lang=ru_RU"></script>
+  <script src="js/scripts.min.js"></script>
 
 </body>
 </html>

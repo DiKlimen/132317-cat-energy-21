@@ -13,22 +13,27 @@
 
   background-color: @basic-green;
 
-  &--show-more {
-    color: @special-dark-grey;
-    font-size: 16px;
-    background-color: @basic-grey;
-
-    &:hover {
-      background-color: @basic-grey;
-    }
-  }
-
   &:hover {
     background-color: @basic-green2;
   }
 
   &:active .button__text {
     opacity: 0.6;
+  }
+
+  &--show-more {
+    color: @special-dark-grey;
+    font-size: 16px;
+    background-color: @basic-grey;
+
+    &:hover {
+      background-color: @show-more-border;
+    }
+  }
+
+  &--index {
+    font-size: 14px;
+    line-height: 18px;
   }
 
   @media (min-width: @tablet) {
@@ -38,6 +43,9 @@
     &--index {
       height: 54px;
       z-index: 1;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 20px;
     }
   }
 }

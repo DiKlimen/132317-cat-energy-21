@@ -1,8 +1,14 @@
 .main-nav {
   display: none;
+  text-align: center;
+
+  &.active {
+    display: block;
+  }
 
   @media (min-width: @tablet) {
     display: block;
+    text-align: left;
 
     &--inside a {
       color: @black;
