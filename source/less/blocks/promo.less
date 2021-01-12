@@ -17,7 +17,7 @@
   @media (min-resolution: 2dppx) {
     background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), url("/img/backgruond-header-mobile@2x.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 60%, auto 60%;
+    background-size: 100% 63%, auto 63%;
     background-position: center top, 64% top;
   }
 
@@ -52,12 +52,16 @@
     font-size: 60px;
     line-height: 60px;
     color: @black;
+    padding-left: 87px;
+    margin: 0 0 42px 0;
   }
 
   @media (min-width: @desktop) {
-    width: 414px;
     grid-area: text;
     order: 0;
+    padding-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 39px;
   }
 }
 
@@ -74,12 +78,16 @@
     font-weight: 300;
     font-size: 20px;
     line-height: 20px;
+    padding-left: 87px;
+    margin: 0 0 48px 0;
   }
 
   @media (min-width: @desktop) {
     width: 414px;
     grid-area: text;
     order: 0;
+    padding-left: 50px;
+    margin-bottom: 52px;
   }
 }
 
@@ -89,6 +97,7 @@
   @media (min-width: @tablet) {
     order: 4;
     align-self: center;
+    height: 526px;
   }
 
   @media (min-width: @desktop) {
@@ -104,11 +113,14 @@
   @media (min-width: @tablet) {
     width: 709px;
     height: 609px;
+    z-index: -1;
+    transform: translateY(-83px);
   }
 
   @media (min-width: @desktop) {
     width: 552px;
     height: 499px;
+    transform: translateY(-74px) translateX(114px);
   }
 }
 
@@ -118,10 +130,10 @@
   @media (min-width: @tablet) {
     order: 3;
     width: 244px;
-    margin: 0;
+    margin: 0 0 0 82px;
   }
 
   @media (min-width: @desktop) {
-    height: 20px;
+    margin-left: 50px;
   }
 }

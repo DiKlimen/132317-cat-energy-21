@@ -5,13 +5,23 @@
   width: 100%;
   min-height: 40px;
 
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   color: @white;
   text-transform: uppercase;
   text-decoration: none;
 
   background-color: @basic-green;
+
+  &--show-more {
+    color: @special-dark-grey;
+    font-size: 16px;
+    background-color: @basic-grey;
+
+    &:hover {
+      background-color: @basic-grey;
+    }
+  }
 
   &:hover {
     background-color: @basic-green2;
@@ -22,17 +32,12 @@
   }
 
   @media (min-width: @tablet) {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 26px;
-  }
 
-  &--show-more {
-    color: @special-dark-grey;
-
-    background-color: @basic-grey;
-
-    &:hover {
-      background-color: @basic-grey;
+    &--index {
+      height: 54px;
+      z-index: 1;
     }
   }
 }

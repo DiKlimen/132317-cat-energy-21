@@ -6,7 +6,7 @@
   }
 
   @media (min-width: @desktop) {
-    margin-bottom: 71px;
+    margin-bottom: 0;
     padding: 0;
   }
 }
@@ -35,27 +35,29 @@
 
 .food-programs__item {
   margin: 0;
-  padding: 30px 20px 0 20px;
+  padding: 21px 20px 0 20px;
 
   background-color: @basic-grey;
   display: grid;
   grid-template-areas: "img title" "text text" "link link";
-  grid-template-columns: 35% 1fr;
+  grid-template-columns: 30% 1fr;
+  min-height: 266px;
 
   &:last-child {
     margin-bottom: 0;
   }
 
   @media (min-width: @tablet) {
-    padding: 77px 35px 30px 52px;
-    grid-template-columns: 55% 1fr;
+    padding: 68px 35px 44px 52px;
+    grid-template-columns: 62% 1fr;
     grid-template-areas: "title img" "text img" "link img";
+    min-height: 372px;
   }
 
   @media (min-width: @desktop) {
-    grid-template-columns: 170px 1fr;
+    grid-template-columns: 163px 1fr;
     grid-template-areas: "img title" "text text" "link link";
-    padding-right: 52px;
+    padding: 41px 52px 51px 52px;
 
     &:first-child {
       margin-bottom: 0;
@@ -66,21 +68,24 @@
 .food-programs__img {
   height: 53px;
   width: 67px;
+  margin-left: -7px;
   grid-area: img;
 
   @media (min-width: @tablet) {
     height: 211px;
     width: 268px;
+    transform: translateX(-19px) translateY(16px);
   }
 
   @media (min-width: @desktop) {
     width: 134px;
     height: 106px;
+    transform: translateX(-11px) translateY(3px);
   }
 }
 
 .food-programs__title {
-  margin: 0 0 29px 0;
+  margin: 9px 0 24px 0;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
@@ -92,11 +97,12 @@
     line-height: 36px;
     padding: 0;
     grid-area: title;
+    margin-bottom: 25px;
   }
 
   @media (min-width: @desktop) {
-    display: flex;
-    align-items: center;
+    margin-top: 36px;
+    margin-bottom: 0;
   }
 }
 
@@ -107,14 +113,30 @@
   font-size: 14px;
   line-height: 18px;
   font-family: @arial;
+  align-self: flex-start;
+
+  & br {
+    display: none;
+  }
 
   @media (min-width: @tablet) {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 53px;
+
+    & br {
+      display: inline;
+    }
   }
 
   @media (min-width: @desktop) {
     width: 100%;
+    margin-bottom: 0;
+    margin-top: 30px;
+
+    & br {
+      display: none;
+    }
   }
 }
 
@@ -138,21 +160,30 @@
     content: "";
     width: 32px;
     height: 11px;
-    background-image: url("/img/icon_arrow.svg");
+    background-image: url("/img/svg/icon_arrow.svg");
     transform: translateX(70%);
     top: 17px;
 
     @media (min-width: @tablet) {
-      top: 22px;
+      top: auto;
+      left: 110px;
     }
   }
 
   @media (min-width: @tablet) {
-    padding: 15px 0 15px 0;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-top: 14px;
 
     font-size: 20px;
     line-height: 27px;
 
     border: none;
+    transform: translateY(-14px);
+  }
+
+  @media (min-width: @desktop) {
+    transform: translateY(3px);
   }
 }

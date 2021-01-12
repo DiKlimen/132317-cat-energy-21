@@ -1,20 +1,27 @@
 .show-more {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
   min-height: 209px;
-  padding-right: 20px;
-  padding-left: 20px;
-  background-image: url("/img/plus.svg");
+  padding: 0 20px 25px 20px;
+  background-image: url("/img/svg/plus.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 25px;
 
   @media (min-width: @tablet) {
     background-color: @white;
     padding-left: 0;
     padding-right: 0;
-    background-image: url("/img/plus-tablet.svg");
+    padding-bottom: 34px;
+    background-image: url("/img/svg/plus-tablet.svg");
     background-position: center 52px;
+    height: 84%;
+    align-self: flex-end;
+  }
+
+  @media (min-width: @desktop) {
+    padding-bottom: 41px;
   }
 }
 
@@ -22,12 +29,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: auto;
-  padding: 0 36px;
+  padding: 0 29px;
+
+  @media (min-width: @tablet) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0 37px;
+  }
 }
 
 .show-more__text {
-  margin: auto 0 8px 0;
+  margin: 0;
 
   font-size: 16px;
   line-height: 20px;
@@ -37,14 +51,18 @@
     font-weight: 300;
     font-size: 20px;
     line-height: 22px;
-    margin: 0 0 23px 0;
-    padding-top: 160px;
+    margin: 0;
+    padding: 0 20px;
     text-align: center;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0 10px;
   }
 }
 
 .show-more__description {
-  margin: 0 0 21px 0;
+  margin: 8px 0 0 0;
 
   font-size: 12px;
   line-height: 16px;
@@ -53,15 +71,21 @@
   @media (min-width: @tablet) {
     font-size: 16px;
     line-height: 18px;
-    margin-bottom: auto;
     text-align: center;
+    margin-top: 23px;
   }
 }
 
 .show-more__button-wrap {
   align-self: stretch;
+  margin-top: 21px;
 
   @media (min-width: @tablet) {
     align-self: stretch;
+    margin: 87px 37px 0 37px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 85px;
   }
 }

@@ -3,29 +3,37 @@
 }
 
 .selection-form__options-and-programm-wrap {
+  @media (min-width: @tablet) {
+    margin-bottom: 73px;
+  }
+
   @media (min-width: @desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
-    margin-bottom: 65px;
+    margin-bottom: 67px;
   }
 }
 
 .selection-form__area {
-  margin: 0 0 27px 0;
+  margin: 0 0 23px 0;
   padding: 0;
 
   border: none;
 
   &--options {
+    @media (min-width: @tablet) {
+      margin-bottom: 72px;
+    }
+
     @media (min-width: @desktop) {
       margin: 0;
     }
   }
 
   &--program {
-    padding: 20px 0 22px 0;
-
+    padding: 23px 0 17px 0;
+    margin-bottom: 27px;
     border-top: 1px solid @border-gray;
     border-bottom: 1px solid @border-gray;
 
@@ -38,11 +46,35 @@
   }
 
   &--comment {
-    margin-bottom: 65px;
+    margin-bottom: 27px;
+
+    @media (min-width: @tablet) {
+      margin-bottom: 65px;
+    }
   }
 
   &--contact {
-    margin-bottom: 70px;
+    margin-bottom: 26px;
+
+    @media (min-width: @tablet) {
+      margin-bottom: 65px;
+    }
+
+    @media (min-width: @desktop) {
+      margin-bottom: 68px;
+    }
+  }
+
+  &--extra {
+    margin-bottom: 30px;
+
+    @media (min-width: @tablet) {
+      margin-bottom: 54px;
+    }
+
+    @media (min-width: @desktop) {
+      margin-bottom: 62px;
+    }
   }
 
   &--contact .selection-form__item {
@@ -56,7 +88,7 @@
   }
 
   &:last-child {
-    margin-bottom: 34px;
+    margin-bottom: 27px;
 
     @media (min-width: @desktop) {
       margin-bottom: 0;
@@ -67,7 +99,7 @@
     margin-bottom: 34px;
 
     @media (min-width: @tablet) {
-      margin-bottom: 65px;
+      margin-bottom: 77px;
     }
   }
 
@@ -88,6 +120,18 @@
     padding: 0;
     margin-bottom: 65px;
   }
+
+  &--contact {
+    @media (min-width: @tablet) {
+      margin-bottom: 75px;
+    }
+  }
+
+  &--comment {
+    @media (min-width: @tablet) {
+      margin-bottom: 77px;
+    }
+  }
 }
 
 .selection-form__label {
@@ -102,35 +146,16 @@
     width: 100%;
     margin-right: 0;
     align-items: center;
-  }
+    position: relative;
 
-  &--email::after {
-    position: absolute;
-    content: "";
-    width: 19px;
-    height: 14px;
-    background-image: url("../img/input-icon/icon_email.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    right: 14px;
+    & svg {
+      position: absolute;
+      right: 14px;
+      z-index: 1;
 
-    @media (min-width: @tablet) {
-      right: 19px;
-    }
-  }
-
-  &--tel::after {
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background-image: url("../img/input-icon/phone.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    right: 12px;
-
-    @media (min-width: @tablet) {
-      right: 15px;
+      @media (min-width: @tablet) {
+        right: 19px;
+      }
     }
   }
 
@@ -167,6 +192,12 @@
       margin-left: 18px;
     }
   }
+
+  @media (min-width: @tablet) {
+    height: 52px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .selection-form__radio {
@@ -178,7 +209,7 @@
   min-height: 150px;
   padding: 13px 10px 13px 15px;
 
-  font-size: 16;
+  font-size: 16px;
   line-height: 18px;
   font-family: @oswald;
   text-transform: uppercase;
@@ -186,6 +217,11 @@
   border: 1px solid @input-border;
 
   resize: none;
+
+  @media (min-width: @tablet) {
+    min-height: 174px;
+    padding-top: 9px;
+  }
 
   @media (min-width: @desktop) {
     min-height: 174px;
@@ -195,7 +231,14 @@
 .selection-form__wrap {
   padding: 0 20px 0 20px;
   display: grid;
-  row-gap: 12px;
+
+  &--input-radio {
+    row-gap: 13px;
+  }
+
+  &--extra {
+    row-gap: 13px;
+  }
 
   @media (min-width: @tablet) {
     padding: 0;
@@ -217,6 +260,7 @@
     &--extra {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       width: 100%;
+      column-gap: 75px;
     }
   }
 }
@@ -327,12 +371,24 @@
   }
 }
 
+.selection-form__label--email svg,
+.selection-form__label--tel svg {
+  width: 20px;
+  height: 20px;
+}
+
+.selection-form__label:focus svg {
+  stroke: @basic-green;
+}
+
+
+
 .selection-form__checkbox:checked + label::after {
   content: "";
   position: absolute;
   width: 26px;
   height: 26px;
-  background-image: url("/img/tick.svg");
+  background-image: url("/img/svg/tick.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   left: 2px;
@@ -374,6 +430,11 @@
     margin: 0 61px 0 0;
     height: 52px;
     font-size: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 568px;
+    margin-right: 82px;
   }
 }
 

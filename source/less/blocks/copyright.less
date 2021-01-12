@@ -6,14 +6,20 @@
 
   text-decoration: none;
 
-  pointer-events: none;
+  svg {
+    fill: @special-dark-grey-2;
+  }
 
-  &:hover path {
+  &:hover svg {
     fill: @basic-green;
   }
 
   &:active {
     opacity: 0.5;
+  }
+
+  @media (min-width: @tablet) {
+    padding: 0;
   }
 }
 
@@ -34,6 +40,8 @@
 
 .copyright__img {
   pointer-events: all;
+  width: 27px;
+  height: 34px;
 
   @media (min-width: @tablet) {
     pointer-events: auto;

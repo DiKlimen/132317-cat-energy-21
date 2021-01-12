@@ -16,34 +16,27 @@
   }
 
   @media (min-width: @tablet) {
-    min-height: 324px;
+    min-height: 510px;
     display: flex;
     flex-direction: column;
-    padding: 10px 0 40px 0;
-    background-image: linear-gradient(transparent 20%, @basic-grey 20%);
+    padding: 0 0 40px 0;
+    background-image: linear-gradient(transparent 16%, @basic-grey 16%);
   }
 
   @media (min-width: @desktop) {
     min-height: 511px;
+    min-width: 245px;
   }
 }
 
 .product_wrap {
-  display: grid;
-  margin: 0 0 13px 0;
+  display: flex;
+  margin: 0 0 9px 0;
   padding: 0 20px 0 20px;
 
-  grid-template-areas: "img title" "img feature";
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: min-content 1fr;
-
   @media (min-width: @tablet) {
-    display: flex;
     flex-direction: column;
     padding: 0 36px 0 36px;
-  }
-
-  @media (min-width: @tablet) {
     margin-bottom: auto;
   }
 }
@@ -52,12 +45,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
 
   grid-area: img;
 
   @media (min-width: @tablet) {
-    margin: 0 0 34px 0;
+    margin: 0 0 38px 0;
   }
 
   @media (min-width: @desktop) {
@@ -75,17 +67,19 @@
   @media (min-width: @tablet) {
     width: auto;
     height: 200px;
+    transform: translateY(8px);
   }
 
   @media (min-width: @desktop) {
     height: 196px;
+    transform: translate(5px, 3px);
   }
 }
 
 
 .product__title {
-  width: 50%;
-  margin: 0 0 18px 0;
+  width: 60%;
+  margin: 0 0 14px 0;
 
   font-size: 16px;
   line-height: 20px;
@@ -96,8 +90,9 @@
   grid-area: title;
 
   @media (min-width: @tablet) {
-    margin: 0 0 21px 0;
+    margin: 0 0 20px 0;
     width: 100%;
+    padding: 0 50px;
 
     font-size: 20px;
     line-height: 24px;
@@ -130,12 +125,21 @@
 .product__feature-item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 3px;
 
   @media (min-width: @tablet) {
     border-bottom: 1px solid @very-light-grey;
     padding-bottom: 9px;
-    margin: 0 0 7px 0;
+    margin: 0 0 4px 0;
+  }
+
+  @media (min-width: @tablet) {
+    padding-bottom: 11px;
+  }
+}
+
+.product-desc-inner {
+  @media (min-width: @desktop) {
+    margin: 0 3px;
   }
 }
 
@@ -147,6 +151,11 @@
     padding-right: 38px;
     padding-left: 38px;
   }
+}
+
+.product__button-link {
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .product__value {
