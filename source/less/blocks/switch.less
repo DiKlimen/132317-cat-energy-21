@@ -44,7 +44,11 @@
     appearance: none;
     outline: none;
     background: transparent;
-    margin: 3px 10px 0 10px;
+    margin: 3px 20px 0 20px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 3px 30px 0 30px;
   }
 
   &::-webkit-slider-runnable-track {
@@ -113,6 +117,8 @@
     font-weight: 300;
     font-size: 20px;
     line-height: 30px;
+    border-bottom: 1px dotted @very-light-grey;
+    padding: 0;
   }
 
   &--before {
